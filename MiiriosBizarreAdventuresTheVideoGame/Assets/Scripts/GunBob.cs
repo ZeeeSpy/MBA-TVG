@@ -10,7 +10,7 @@ public class GunBob : MonoBehaviour
     [SerializeField]
     private float bobDistance = 1f;
     [SerializeField]
-    private Transform Gun;
+    public Transform Gun;
 
     private float horizontal, vertical, timer, waveSlice;
     private Vector3 midPoint;

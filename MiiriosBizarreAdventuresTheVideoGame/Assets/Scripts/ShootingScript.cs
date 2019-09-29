@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class ShootingScript : MonoBehaviour
 {
-    Animator gunanimator;
+    public Animator gunanimator;
+    public GameObject bullet;
+    public int force;
 
-    private void Start()
-    {
-        gunanimator = gameObject.GetComponent<Animator>();
-    }
     // Update is called once per frame
     void Update()
     {
@@ -17,6 +15,19 @@ public class ShootingScript : MonoBehaviour
         {
             gunanimator.Play("Shoot");
             Debug.Log("Bang");
+            StartCoroutine(BulletScript());
+            BulletScript();
+            
+
         }
+    }
+
+    IEnumerator BulletScript()
+    {
+        GameObject Currentbullet = Instantiate(bullet, transform.position, transform.rotation);
+        Currentbullet.GetComponent<Rigidbody>().AddForce((transform.forward *force));
+
+        yield return new WaitForSeconds(2);
+        Destroy(Currentbullet);
     }
 }

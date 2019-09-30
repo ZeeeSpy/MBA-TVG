@@ -5,6 +5,8 @@ using UnityEngine;
 public class ShootingScript : MonoBehaviour
 {
     public Animator gunanimator;
+    public AudioSource AS;
+    public AudioClip GunShotSFX;
 
     // Update is called once per frame
     void Update()
@@ -13,7 +15,7 @@ public class ShootingScript : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             gunanimator.Play("Shoot");
-            Debug.Log("Bang");
+            AS.PlayOneShot(GunShotSFX);
             BulletScript();
         }
     }

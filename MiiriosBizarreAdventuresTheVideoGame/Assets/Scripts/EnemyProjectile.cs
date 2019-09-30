@@ -18,10 +18,6 @@ public class EnemyProjectile : MonoBehaviour
         {
             other.GetComponent<PlayerScript>().Damage(ProjectileDamage);
             Destroy(gameObject);
-        }
-
-         
-    }
-
-    
+        }    
+    } 
 }

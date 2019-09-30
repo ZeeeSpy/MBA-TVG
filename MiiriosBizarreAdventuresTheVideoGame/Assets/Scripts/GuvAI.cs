@@ -20,6 +20,7 @@ public class GuvAI : MonoBehaviour, Shootable
     private AudioClip[] DeadSFX;
     private AudioClip[] HurtSFX;
 
+    private BoxCollider[] colliders;
     //Cache
     private Vector3 playerlocation;
 
@@ -28,7 +29,7 @@ public class GuvAI : MonoBehaviour, Shootable
         thisAudioSource = gameObject.GetComponent<AudioSource>();
         ThisGuv = gameObject.GetComponent<NavMeshAgent>();
 
-
+        colliders = GetComponentsInChildren<BoxCollider>();
         playerlocation = GameObject.FindGameObjectWithTag("Player").transform.position;
         ThisGuv.SetDestination(playerlocation);
         StartCoroutine("B1");
@@ -88,13 +89,14 @@ public class GuvAI : MonoBehaviour, Shootable
             transform.Rotate(0, 0, 90);
             FallOver = true;
             StopCoroutine("B1");
+            GetComponent<BoxCollider>().enabled = false;
         }
     }
 
     IEnumerator B1() {
         while (true)
         {
-            yield return new WaitForSeconds(2.5f);
+            yield return new WaitForSeconds(Random.Range(0.5f,2.5f));
             for (int i = 0; i < 3; i++)
             {
                 StartCoroutine(B1Attack());

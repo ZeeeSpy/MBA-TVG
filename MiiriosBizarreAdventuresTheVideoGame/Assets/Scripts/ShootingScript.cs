@@ -5,29 +5,28 @@ using UnityEngine;
 public class ShootingScript : MonoBehaviour
 {
     public Animator gunanimator;
-    public GameObject bullet;
-    public int force;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonUp("Fire1"))
+        Debug.DrawRay(transform.position, transform.forward*1000, Color.black);
+        if (Input.GetButtonDown("Fire1"))
         {
             gunanimator.Play("Shoot");
             Debug.Log("Bang");
-            StartCoroutine(BulletScript());
             BulletScript();
-            
-
         }
     }
 
-    IEnumerator BulletScript()
+    public void BulletScript()
     {
-        GameObject Currentbullet = Instantiate(bullet, transform.position, transform.rotation);
-        Currentbullet.GetComponent<Rigidbody>().AddForce((transform.forward *force));
-
-        yield return new WaitForSeconds(2);
-        Destroy(Currentbullet);
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.forward*100000, out hit)){
+                Shootable ObjectThatWasShot = hit.collider.GetComponent<Shootable>();
+                if (ObjectThatWasShot != null)
+                {
+                    ObjectThatWasShot.GetShot();
+                }
+        }
     }
 }

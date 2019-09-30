@@ -1,0 +1,1100 @@
+fileFormatVersion: 2
+guid: 9b502b8b0e1d62747a863d06716c10a0
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Ranks_0
+    21300002: Ranks_1
+    21300004: Ranks_2
+    21300006: Ranks_3
+    21300008: Ranks_4
+    21300010: Ranks_5
+    21300012: Ranks_6
+    21300014: Ranks_7
+    21300016: Ranks_8
+    21300018: Ranks_9
+    21300020: Ranks_10
+    21300022: Ranks_11
+    21300024: Ranks_12
+    21300026: Ranks_13
+    21300028: Ranks_14
+    21300030: Ranks_15
+    21300032: Ranks_16
+    21300034: Ranks_17
+    21300036: Ranks_18
+    21300038: Ranks_19
+    21300040: Ranks_20
+    21300042: Ranks_21
+    21300044: Ranks_22
+    21300046: Ranks_23
+    21300048: Ranks_24
+    21300050: Ranks_25
+    21300052: Ranks_26
+    21300054: Ranks_27
+    21300056: Ranks_28
+    21300058: Ranks_29
+    21300060: Ranks_30
+    21300062: Ranks_31
+    21300064: Ranks_32
+    21300066: Ranks_33
+    21300068: Ranks_34
+    21300070: Ranks_35
+    21300072: Ranks_36
+    21300074: Ranks_37
+    21300076: Ranks_38
+    21300078: Ranks_39
+    21300080: Ranks_40
+    21300082: Ranks_41
+    21300084: Ranks_42
+    21300086: Ranks_43
+    21300088: Ranks_44
+    21300090: Ranks_45
+    21300092: Ranks_46
+    21300094: Ranks_47
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ranks_1
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 2401.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c59b8578199584389a9208654603b4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2201.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6e5c5b78382a97418825dd7f964d06b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_3
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 2201.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 136f003d23a918845a3e32114440532d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_4
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 2201.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd62d7aaf7693834ca4bc8e445d9df98
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_5
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 2201.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f2a147255eab9345bc35bed7b50919f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2001.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa915b9fd405a7a498452267b0f994c1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_7
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 2001.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 893c679b423116c48a6c931afcc20750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_8
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 2001.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fb9ae9950f9d954281461afdcc0bf65
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_9
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 2001.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f38127f8a5550af4694ee84b82fb67a4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1801.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b47777a39875c2e4bab119dad3c92989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_11
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1801.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757ec076d59a7f3468d6d116947bde89
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_12
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 1801.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a222dd08452318e4bb1e01cc2ef065a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_13
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 1801.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6fac13d348723b488d8fe00e7123c4c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1601.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d724b911969554439df723351e4f0ae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_15
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1601.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bb6609dfde372e43bd6cc4ab23081d6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_16
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 1601.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bebb4c5fed44de4fadb65b437df6385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_17
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 1601.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d1596d87ca14df4fb0ad992a69675e1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1401.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e8e25475daaec045b10dee4f9883fa1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_19
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1401.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fd4bd1a93823a842bcf8f3d50392d4b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_20
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 1401.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82690a2447cb9fe459dbd546ea0b6457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_21
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 1401.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd471dcf4813a0f4f80d80abe5b2a7e9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1201.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f796893cdc809d248bef1da166151fcd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_23
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1201.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f53d566271719d8458b4c1dfdd5c5b87
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_24
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 1201.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e81a4c072eb0114f83b23ba53151b31
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_25
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 1201.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42ce372a6fa338345acd1835597e9140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1001.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a14453c58a16b504aa217229af5c43c9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_27
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1001.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1cb2e18a1e3ff7469f8b188c8067f2a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_28
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 1001.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7bf43f615f63f94f923bfbd645296e2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_29
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 1001.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e83d79baf124146866cd891ade8050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 801.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 377696f6235ef1644a5e84cff11abc9b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_31
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 801.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b54a677c47109fb4e8d07d0795329a51
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_32
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 801.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce39ff84efad9fa4487c6f1418d2adb9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_33
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 801.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a52b66672ffb6640ad0ad91d4b32963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 601.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 055929f7e3133984cb42fa159b6a124f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_35
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 601.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 117e424db870dc94c89ffa3c5833d15e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_36
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 601.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76c2f251185ee624c926f3ceb70d46d3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_37
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 601.8462
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f433265e74eb4c243aa13b42d6342e6b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 401.84616
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 156314dc760d7f04f961f26debd0bcf6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_39
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 401.84616
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6374ea979444f85489131b713a5e04af
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_40
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 401.84616
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af3a9879872b7bc4389172e47a972f7b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_41
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 401.84616
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d97ccdfc2818654dbf30934da88b243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 201.84616
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7705af0f790afd4b94aa4fb9962de5c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_43
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 201.84616
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06e11ea13c157b94f9e224fca1c80737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_44
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 201.84616
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e246acb3e489c4345a9d7b8f209bcb05
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_45
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 201.84616
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439b09df45beb1f499d6ba90f4b8f08f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranks_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.8461609
+        width: 399.25
+        height: 200.15384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e44023ebdfb5f8e43ba8d6b393349dd7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c3482e68140c4994dae55686982dc313
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -72,7 +72,6 @@ public class GuvAI : MonoBehaviour, Shootable
             Debug.Log("GuvDied");
             Dead = true;
             ThisGuv.enabled = false;
-            thisAudioSource.PlayOneShot(DeadSFX[Random.Range(0, DeadSFX.Length)]);
             Die();
         } else
         {
@@ -85,6 +84,7 @@ public class GuvAI : MonoBehaviour, Shootable
         if (!FallOver)
         {
             transform.position = new Vector3(transform.position.x, 0.51f, transform.position.z);
+            thisAudioSource.PlayOneShot(DeadSFX[Random.Range(0, DeadSFX.Length)]);
             transform.Rotate(0, 0, 90);
             FallOver = true;
             StopCoroutine("B1");

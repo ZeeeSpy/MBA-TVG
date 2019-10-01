@@ -1,40 +1,16 @@
 fileFormatVersion: 2
-guid: f1024ee358725b14aac2b3f940dd2ed9
+guid: 0295d9244aec98a4abfd40b7f8a0eb26
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Comp_Mouse
+    100000: default
     100002: //RootNode
-    100004: Drive
-    100006: Keyboard1
-    100008: Monitor
-    100010: System_unit
-    400000: Comp_Mouse
+    400000: default
     400002: //RootNode
-    400004: Drive
-    400006: Keyboard1
-    400008: Monitor
-    400010: System_unit
-    2100000: Comp_MouseMat
-    2100002: DriveMat
-    2100004: Keyboard1Mat
-    2100006: MonitorMat
-    2100008: System_unitMat
-    2300000: Comp_Mouse
-    2300002: Drive
-    2300004: Keyboard1
-    2300006: Monitor
-    2300008: System_unit
-    3300000: Comp_Mouse
-    3300002: Drive
-    3300004: Keyboard1
-    3300006: Monitor
-    3300008: System_unit
-    4300000: Comp_Mouse
-    4300002: Drive
-    4300004: Keyboard1
-    4300006: Monitor
-    4300008: System_unit
+    2100000: Material
+    2300000: default
+    3300000: default
+    4300000: default
   externalObjects: {}
   materials:
     importMaterials: 1

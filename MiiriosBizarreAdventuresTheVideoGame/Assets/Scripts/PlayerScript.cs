@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-    private int HP = 92; //Size of rank array * 2 (it's close it 100 so w/e)
+    private int HP = 45;
     public Image RankUIImage;
     private Sprite[] RankArray;
 
@@ -16,11 +16,18 @@ public class PlayerScript : MonoBehaviour
     public void Damage(int d)
     {
         HP = HP - d;
-        UpdateRank();
+        
+        if (HP <= 0)
+        {
+            Debug.Log("You Died");
+        } else
+        {
+            UpdateRank();
+        }
     }
 
     private void UpdateRank()
     {
-        RankUIImage.sprite = RankArray[(HP/2)-1];
+        RankUIImage.sprite = RankArray[HP];
     }
 }

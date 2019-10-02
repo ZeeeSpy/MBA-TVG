@@ -61,7 +61,6 @@ public class GuvAI : MonoBehaviour, Shootable
     }
 
     public void GetShot() {
-        Debug.Log("This Guv Got Hit");
         HP--;
         CheckIfDead();
     }
@@ -70,7 +69,6 @@ public class GuvAI : MonoBehaviour, Shootable
     {
         if (HP <= 0)
         {
-            Debug.Log("GuvDied");
             Dead = true;
             ThisGuv.enabled = false;
             Die();

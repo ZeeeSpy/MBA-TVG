@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class InteractScript : MonoBehaviour
 {
-    private bool caninteract = false;
     public Level1TextStuff UIText;
     public Image interacticon;
 

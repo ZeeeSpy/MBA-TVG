@@ -24,6 +24,8 @@ public class GuvAI : MonoBehaviour, Shootable
     //Cache
     private Vector3 playerlocation;
 
+    private bool haslos = false;
+
     void Start()
     {
         thisAudioSource = gameObject.GetComponent<AudioSource>();
@@ -49,7 +51,20 @@ public class GuvAI : MonoBehaviour, Shootable
         {
             playerlocation = GameObject.FindGameObjectWithTag("Player").transform.position;
             ThisGuv.SetDestination(playerlocation);
-        } 
+        }
+        Ray ray = new Ray(transform.position, playerlocation - transform.position);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, 30f))
+        {
+            if (hit.transform.tag == "Player")
+            {
+                haslos = true;
+            }
+        } else
+        {
+            haslos = false;
+        }
+        
     }
 
     private void LateUpdate()
@@ -97,8 +112,11 @@ public class GuvAI : MonoBehaviour, Shootable
             yield return new WaitForSeconds(Random.Range(0.5f,2.5f));
             for (int i = 0; i < 3; i++)
             {
-                StartCoroutine(B1Attack());
-                yield return new WaitForSeconds(0.2f);
+                if (haslos)
+                {
+                    StartCoroutine(B1Attack());
+                    yield return new WaitForSeconds(0.2f);
+                }
             }
         } 
     }

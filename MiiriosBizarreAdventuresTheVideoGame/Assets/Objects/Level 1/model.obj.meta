@@ -3,19 +3,18 @@ guid: 49b4a177f26cf1c438fdb908dba0362a
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: mesh419837007
+    100000: default
     100002: //RootNode
-    400000: mesh419837007
+    400000: default
     400002: //RootNode
-    2100000: mat20
-    2100002: mat10
-    2100004: mat19
-    2100006: mat9
-    2100008: mat18
-    2100010: mat22
-    2300000: mesh419837007
-    3300000: mesh419837007
-    4300000: mesh419837007
+    2100000: mat15
+    2100002: mat23
+    2100004: mat14
+    2100006: mat16
+    2100008: mat12
+    2300000: default
+    3300000: default
+    4300000: default
   externalObjects: {}
   materials:
     importMaterials: 1

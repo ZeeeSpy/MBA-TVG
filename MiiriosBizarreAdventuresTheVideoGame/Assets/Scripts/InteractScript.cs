@@ -1,40 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InteractScript : MonoBehaviour
 {
-    private Interactable cachedinteractabe;
     private bool caninteract = false;
     public Level1TextStuff UIText;
+    public Image interacticon;
 
     void Update()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward * 3, out hit))
+        if (Physics.Linecast(transform.position, transform.forward * 10f, out hit))
         {
             Interactable ObjectThatWasInteractedWith = hit.collider.GetComponent<Interactable>();
             if (ObjectThatWasInteractedWith != null)
             {
-                cachedinteractabe = ObjectThatWasInteractedWith;
                 caninteract = true;
+                interacticon.enabled = true;
+                if (Input.GetButtonDown("Interact") && caninteract)
+                {
+                    Interact(hit);
+                }
             } else
             {
                 caninteract = false;
-                cachedinteractabe = null;
+                interacticon.enabled = false;
             } 
             
         }
-
-
-        if (Input.GetButtonDown("Interact") && caninteract)
-        {
-            Interact();
-        }
     }
 
-    private void Interact()
+    private void Interact(RaycastHit hit)
     {
-        UIText.showtext(cachedinteractabe.InteractWithObject());
+        UIText.showtext(hit.collider.GetComponent<Interactable>().InteractWithObject());
     }
 }

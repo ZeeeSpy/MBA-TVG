@@ -17,6 +17,8 @@ public class ShootingScript : MonoBehaviour
             AS.PlayOneShot(GunShotSFX);
             BulletScript();
         }
+
+        
     }
 
     public void BulletScript()

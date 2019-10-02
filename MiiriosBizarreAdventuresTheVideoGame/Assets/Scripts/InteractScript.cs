@@ -11,25 +11,28 @@ public class InteractScript : MonoBehaviour
 
     void Update()
     {
+        Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
-        if (Physics.Linecast(transform.position, transform.forward * 10f, out hit))
+        if (Physics.Raycast(ray, out hit, 1f))
         {
-            Interactable ObjectThatWasInteractedWith = hit.collider.GetComponent<Interactable>();
-            if (ObjectThatWasInteractedWith != null)
+            interacticon.enabled = true;
+            Interactable InteractedObject = hit.collider.GetComponent<Interactable>();
+            if (InteractedObject != null)
             {
-                caninteract = true;
-                interacticon.enabled = true;
-                if (Input.GetButtonDown("Interact") && caninteract)
+                if (Input.GetButtonDown("Interact"))
                 {
                     Interact(hit);
                 }
             } else
             {
-                caninteract = false;
                 interacticon.enabled = false;
-            } 
-            
+            }
+        } else
+        {
+            interacticon.enabled = false;
         }
+        
+
     }
 
     private void Interact(RaycastHit hit)

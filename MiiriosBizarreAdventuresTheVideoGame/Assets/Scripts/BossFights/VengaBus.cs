@@ -13,6 +13,7 @@ public class VengaBus : MonoBehaviour, Shootable
     private int HP = 200;
     //Max Hp 200
     private int phase = 1;
+    private float phasewait = 3f;
     public Slider Hpbar;
     bool charging = false;
     public BoxCollider hurtbox;
@@ -39,12 +40,13 @@ public class VengaBus : MonoBehaviour, Shootable
         while (true)
         {
             FindingPlayer = true;
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(phasewait);
             FindingPlayer = false;
             charge();
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(phasewait);
             charging = false;
             hurtbox.enabled = false;
+            thisbus.AddForce(transform.up * -1000);
         }
     }
 
@@ -61,6 +63,7 @@ public class VengaBus : MonoBehaviour, Shootable
     private void Phase2()
     {
         phase = 2;
+        phasewait = 1.5f;
         Debug.Log("Phase 2");
         //Add saws?
     }
@@ -70,9 +73,15 @@ public class VengaBus : MonoBehaviour, Shootable
         HP = HP - 1;
         Hpbar.value = HP;
 
-        if (HP < 100)
+        if (HP < 150)
         {
             Phase2();
+        }
+
+        if (HP <= 0)
+        {
+            StopCoroutine("BossLoop");
+            Debug.Log("Boss Defeated");
         }
     }
 }

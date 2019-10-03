@@ -60,10 +60,11 @@ public class GuvAI : MonoBehaviour, Shootable
             {
                 haslos = true;
             }
-        } else
-        {
-            haslos = false;
-        }
+            else
+            {
+                haslos = false;
+            }
+        } 
         
     }
 

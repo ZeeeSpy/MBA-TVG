@@ -192,6 +192,72 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &267033468
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 267033469}
+  - component: {fileID: 267033471}
+  - component: {fileID: 267033470}
+  - component: {fileID: 267033472}
+  m_Layer: 0
+  m_Name: HurtBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &267033469
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267033468}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.34, y: 12.96, z: 30.35}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 534580216}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &267033470
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267033468}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 28.1, y: 27, z: 20}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &267033471
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267033468}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &267033472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267033468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77893c9a55fcd8b4d919fd3780086850, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &366504924
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,6 +566,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 52370115}
   Hpbar: {fileID: 448448842}
+  hurtbox: {fileID: 267033470}
+--- !u!4 &534580216 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400002, guid: ca0dad64a05bd224cb7c8a5ffd568d8a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1113617302}
+  m_PrefabAsset: {fileID: 0}
 --- !u!65 &534580217
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -511,7 +584,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 30.829401, y: 32.876198, z: 70.4722}
+  m_Size: {x: 21, y: 32.876198, z: 70.4722}
   m_Center: {x: -0.72000027, y: 13.398999, z: 2.6653004}
 --- !u!1 &851531308
 GameObject:

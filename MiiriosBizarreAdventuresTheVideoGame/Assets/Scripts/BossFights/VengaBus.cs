@@ -15,12 +15,12 @@ public class VengaBus : MonoBehaviour, Shootable
     private int phase = 1;
     public Slider Hpbar;
     bool charging = false;
+    public BoxCollider hurtbox;
 
     private void Start()
     {
         thisbus = gameObject.GetComponent<Rigidbody>();
         StartCoroutine("BossLoop");
-
     }
 
     void Update()
@@ -28,8 +28,6 @@ public class VengaBus : MonoBehaviour, Shootable
         if (FindingPlayer)
         {
             Vector3 targetPostition = new Vector3(player.position.x, this.transform.position.y, player.position.z);
-            //this.transform.LookAt(targetPostition);
-
             Vector3 relativePos = targetPostition - transform.position;
             Quaternion toRotation = Quaternion.LookRotation(relativePos);
             transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, 5 * Time.deltaTime);
@@ -46,6 +44,7 @@ public class VengaBus : MonoBehaviour, Shootable
             charge();
             yield return new WaitForSeconds(3f);
             charging = false;
+            hurtbox.enabled = false;
         }
     }
 
@@ -55,6 +54,7 @@ public class VengaBus : MonoBehaviour, Shootable
         {
             thisbus.AddForce(transform.forward * force * phase);
             charging = true;
+            hurtbox.enabled = true;
         }
     }
 

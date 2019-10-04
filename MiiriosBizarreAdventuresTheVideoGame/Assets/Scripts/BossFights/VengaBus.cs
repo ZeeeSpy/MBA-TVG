@@ -11,17 +11,27 @@ public class VengaBus : MonoBehaviour, Shootable
     private bool FindingPlayer = false;
     private int force = 9000;
     private int HP = 200;
+    private readonly int MaxHp = 200;
     //Max Hp 200
     private int phase = 1;
     private float phasewait = 3f;
     public Slider Hpbar;
     bool charging = false;
     public BoxCollider hurtbox;
+    public GameObject demotebars;
+    private AudioSource music;
+
+    public AudioClip Phase1Music;
+    public AudioClip Phase2Music;
+    private bool inphase2 = false;
 
     private void Start()
     {
         thisbus = gameObject.GetComponent<Rigidbody>();
         StartCoroutine("BossLoop");
+        music = gameObject.GetComponent<AudioSource>();
+        music.clip = Phase1Music;
+        music.Play();
     }
 
     void Update()
@@ -62,17 +72,22 @@ public class VengaBus : MonoBehaviour, Shootable
 
     private void Phase2()
     {
-        phase = 2;
-        phasewait = 1.5f;
-        Debug.Log("Phase 2");
-        //Add saws?
+        if (!inphase2)
+        {
+            phase = 2;
+            phasewait = 1.5f;
+            Debug.Log("Phase 2");
+            demotebars.SetActive(true);
+            music.clip = Phase2Music;
+            music.Play();
+            inphase2 = true;
+        }
     }
 
     public void GetShot()
     {
         HP = HP - 1;
         Hpbar.value = HP;
-
         if (HP < 150)
         {
             Phase2();

@@ -14,6 +14,7 @@ public class PlayerScript : MonoBehaviour
     private bool Died = false;
     public AudioSource GameOverAudio;
     public Image gameover;
+    public AudioClip Oof;
 
     private void Awake()
     {
@@ -24,7 +25,7 @@ public class PlayerScript : MonoBehaviour
     public void Damage(int d)
     {
         HP = HP - d;
-        
+        GameOverAudio.PlayOneShot(Oof); 
         if (HP <= 0)
         {
             PlayerDead();
@@ -65,7 +66,7 @@ public class PlayerScript : MonoBehaviour
     {
         if (Died)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Submit"))
             {
                 string currentscene = SceneManager.GetActiveScene().name;
                 SceneManager.LoadScene(currentscene);

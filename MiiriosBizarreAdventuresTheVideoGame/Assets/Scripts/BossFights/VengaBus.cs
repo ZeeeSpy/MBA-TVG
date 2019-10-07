@@ -10,7 +10,7 @@ public class VengaBus : MonoBehaviour, Shootable
     private Rigidbody thisbus;
     private bool FindingPlayer = false;
     private int force = 9000;
-    private int HP = 200;
+    private int HP = 5;
     private readonly int MaxHp = 200;
     //Max Hp 200
     private int phase = 1;
@@ -21,9 +21,16 @@ public class VengaBus : MonoBehaviour, Shootable
     public GameObject demotebars;
     private AudioSource music;
 
+    public GameObject deathparticles;
+
+    public AudioClip DeathSound;
     public AudioClip Phase1Music;
     public AudioClip Phase2Music;
     private bool inphase2 = false;
+    private bool died = false;
+    public GameObject pepes;
+
+    public BoxCollider nextLevel;
 
     private void Start()
     {
@@ -95,8 +102,25 @@ public class VengaBus : MonoBehaviour, Shootable
 
         if (HP <= 0)
         {
+            BossDead();
+        }
+    }
+
+    private void BossDead()
+    {
+        if (!died)
+        {
+            music.Stop();
             StopCoroutine("BossLoop");
             Debug.Log("Boss Defeated");
+            music.PlayOneShot(DeathSound);
+            deathparticles.SetActive(true);
+            demotebars.SetActive(false);
+            hurtbox.enabled = false;
+            died = true;
+            pepes.SetActive(false);
+            FindingPlayer = false;
+            nextLevel.enabled = true;
         }
     }
 }

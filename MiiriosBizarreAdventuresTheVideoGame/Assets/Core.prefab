@@ -145,6 +145,7 @@ MonoBehaviour:
   camerapos: {fileID: 2146107631634599297}
   GameOverAudio: {fileID: 1351752924386001624}
   gameover: {fileID: 2193644596248013774}
+  Oof: {fileID: 8300000, guid: 8287731e82ebd7c438f205dba8f4e546, type: 3}
 --- !u!1 &4643302885462492930
 GameObject:
   m_ObjectHideFlags: 0

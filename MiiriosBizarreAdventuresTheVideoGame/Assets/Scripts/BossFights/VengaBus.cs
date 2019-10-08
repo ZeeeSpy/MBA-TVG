@@ -10,8 +10,8 @@ public class VengaBus : MonoBehaviour, Shootable
     private Rigidbody thisbus;
     private bool FindingPlayer = false;
     private int force = 9000;
-    private int HP = 5;
-    private readonly int MaxHp = 200;
+    private int HP = 200;
+    //private readonly int MaxHp = 200;
     //Max Hp 200
     private int phase = 1;
     private float phasewait = 3f;

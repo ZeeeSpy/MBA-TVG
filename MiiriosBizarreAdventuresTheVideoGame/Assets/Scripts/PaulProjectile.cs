@@ -16,10 +16,10 @@ public class PaulProjectile : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
+            
             player = other.GetComponent<CharacterController>();
             Vector3 projectiledirect = transform.forward;
             impact = transform.forward * 50;
-            Debug.Log(impact);
         }
     }
 

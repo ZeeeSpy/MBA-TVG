@@ -12,7 +12,7 @@ public class PaulBalNomAI : MonoBehaviour, Shootable
     private AudioSource thisAudioSource;
     
     //Projectile 
-    private int force = 200;
+    private int force = 100;
     public GameObject attack;
 
     //Audio

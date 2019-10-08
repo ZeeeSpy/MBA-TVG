@@ -17,14 +17,15 @@ public class PaulProjectile : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             player = other.GetComponent<CharacterController>();
-            Vector3 projectiledirect = other.transform.position - transform.position;
-            impact = ((other.transform.up + (-2 * projectiledirect)) * 50);
+            Vector3 projectiledirect = transform.forward;
+            impact = transform.forward * 50;
+            Debug.Log(impact);
         }
     }
 
     void Update()
     {
-        if (impact.magnitude > 0.2) player.Move(impact * Time.deltaTime);
-        impact = Vector3.Lerp(impact, Vector3.zero, 5 * Time.deltaTime);
+        if (impact.magnitude > 0) player.Move(impact * Time.deltaTime);
+        impact = Vector3.Lerp(impact, Vector3.zero, 0.2f* Time.deltaTime);
     }
 }

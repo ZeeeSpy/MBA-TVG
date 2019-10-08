@@ -5,14 +5,14 @@ using System.Collections;
 public class PaulBalNomAI : MonoBehaviour, Shootable
 {
     //State 
-    private int HP = 10;
+    private int HP = 5;
     private NavMeshAgent ThisPaulBalNom;
     private bool Dead;
     private bool FallOver = false;
     private AudioSource thisAudioSource;
     
     //Projectile 
-    private int force = 150;
+    private int force = 200;
     public GameObject attack;
 
     //Audio
@@ -32,16 +32,15 @@ public class PaulBalNomAI : MonoBehaviour, Shootable
         ThisPaulBalNom = gameObject.GetComponent<NavMeshAgent>();
 
         colliders = GetComponentsInChildren<BoxCollider>();
-        playerlocation = GameObject.FindGameObjectWithTag("Player").transform.position;
-        ThisPaulBalNom.SetDestination(playerlocation);
+
         StartCoroutine("DeathFist");
 
         ThisPaulBalNom.updateRotation = false;
 
         //audio
-        AttackSFX = Resources.LoadAll<AudioClip>("Guv/Attack");
-        DeadSFX = Resources.LoadAll<AudioClip>("Guv/Dead");
-        HurtSFX = Resources.LoadAll<AudioClip>("Guv/Hurt");
+        AttackSFX = Resources.LoadAll<AudioClip>("Paul/Attack");
+        DeadSFX = Resources.LoadAll<AudioClip>("Paul/Dead");
+        HurtSFX = Resources.LoadAll<AudioClip>("Paul/Hurt");
     }
 
     // Update is called once per frame
@@ -50,7 +49,6 @@ public class PaulBalNomAI : MonoBehaviour, Shootable
         if (!Dead)
         {
             playerlocation = GameObject.FindGameObjectWithTag("Player").transform.position;
-            ThisPaulBalNom.SetDestination(playerlocation);
         }
         Ray ray = new Ray(transform.position, playerlocation - transform.position);
         RaycastHit hit;

@@ -19,11 +19,14 @@ public class TMMAI : MonoBehaviour, Shootable
     //Projectile 
     public GameObject ConeAttack;
     public GameObject ConeAttackB;
+    public GameObject BurstAttack;
 
     //Audio
     public AudioClip Masku;
     public AudioClip VryVry;
+    public AudioClip MiirioKid;
 
+    private readonly float ProjectileLife = 1.1f;
     //Cache
     private Vector3 playerlocation;
 
@@ -93,7 +96,7 @@ public class TMMAI : MonoBehaviour, Shootable
         while (true)
         {
             yield return new WaitForSeconds(1f);
-            int AttackNumb = Random.Range(1, 3);
+            int AttackNumb = Random.Range(1, 4);
             if (AttackNumb == 1)
             {
                 StartCoroutine("Attack0");
@@ -102,6 +105,10 @@ public class TMMAI : MonoBehaviour, Shootable
             {
                 StartCoroutine("Attack1");
                 yield return new WaitForSeconds(4.4f);
+            } else if (AttackNumb == 3)
+            {
+                StartCoroutine("Attack2");
+                yield return new WaitForSeconds(3.5f);
             }
         } 
     }
@@ -111,7 +118,7 @@ public class TMMAI : MonoBehaviour, Shootable
         thisAudioSource.PlayOneShot(Masku);
         yield return new WaitForSeconds(1f);
         GameObject CurrentAttack = Instantiate(ConeAttack, transform.position + new Vector3(0, 0.5f, 0), transform.rotation);
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(ProjectileLife);
         Destroy(CurrentAttack);
     }
 
@@ -121,10 +128,27 @@ public class TMMAI : MonoBehaviour, Shootable
         thisAudioSource.PlayOneShot(VryVry);
         yield return new WaitForSeconds(1.4f);
         GameObject CurrentAttack = Instantiate(ConeAttackB, transform.position + new Vector3(0, 0.5f, 0), transform.rotation);
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(ProjectileLife);
         Destroy(CurrentAttack);
     }
 
+    IEnumerator Attack2()
+    {
+        thisAudioSource.PlayOneShot(MiirioKid);
+        yield return new WaitForSeconds(0.9f);
+        for (int i = 0; i < 5; i++)
+        {
+            StartCoroutine("Attack2B");
+            yield return new WaitForSeconds(0.5f);
+        }
+    }
+
+    IEnumerator Attack2B()
+    {
+        GameObject CurrentAttack = Instantiate(BurstAttack, transform.position + new Vector3(0, 0.5f, 0), transform.rotation);
+        yield return new WaitForSeconds(ProjectileLife);
+        Destroy(CurrentAttack);
+    }
 
 
     IEnumerator Wander()

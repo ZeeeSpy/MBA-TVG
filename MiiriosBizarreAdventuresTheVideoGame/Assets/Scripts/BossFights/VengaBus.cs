@@ -95,7 +95,7 @@ public class VengaBus : MonoBehaviour, Shootable
     {
         HP = HP - 1;
         Hpbar.value = HP;
-        if (HP < 150)
+        if (HP < 100)
         {
             Phase2();
         }

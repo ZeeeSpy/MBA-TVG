@@ -3,6 +3,13 @@ using UnityEngine.AI;
 using System.Collections;
 using UnityEngine.UI;
 
+//Day Directional light FFF2A0
+//Day Ambient light FFFFFF
+
+//Night Directional light 460003
+//Night Ambient light 898989
+
+
 public class TMMAI : MonoBehaviour, Shootable
 {
     //State 
@@ -14,7 +21,7 @@ public class TMMAI : MonoBehaviour, Shootable
     public Slider Hpbar;
     private int currentposition = 0;
 
-    private Vector3 [] potentialpositions = new Vector3[5];
+    private Vector3[] potentialpositions = new Vector3[5];
 
     //Projectile 
     public GameObject ConeAttack;
@@ -26,13 +33,14 @@ public class TMMAI : MonoBehaviour, Shootable
     public AudioClip VryVry;
     public AudioClip MiirioKid;
 
+    private int PrevNumb = 0;
     private readonly float ProjectileLife = 1.1f;
     //Cache
     private Vector3 playerlocation;
 
     void Start()
     {
-        potentialpositions[0] = new Vector3 (-33.68f, 5.38f, -26.8f);
+        potentialpositions[0] = new Vector3(-33.68f, 5.38f, -26.8f);
         potentialpositions[1] = new Vector3(-35.33f, 5.38f, 27.59f);
         potentialpositions[2] = new Vector3(9.66f, 5.38f, -28.272f);
         potentialpositions[3] = new Vector3(11.02f, 5.38f, 26.35f);
@@ -53,7 +61,7 @@ public class TMMAI : MonoBehaviour, Shootable
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void LateUpdate()
@@ -65,7 +73,8 @@ public class TMMAI : MonoBehaviour, Shootable
         }
     }
 
-    public void GetShot() {
+    public void GetShot()
+    {
         HP--;
         Hpbar.value = HP;
         CheckIfDead();
@@ -78,7 +87,8 @@ public class TMMAI : MonoBehaviour, Shootable
             Dead = true;
             TMM.enabled = false;
             Die();
-        } else
+        }
+        else
         {
             //thisAudioSource.PlayOneShot(HurtSFX[Random.Range(0, HurtSFX.Length)]);
         }
@@ -92,25 +102,38 @@ public class TMMAI : MonoBehaviour, Shootable
         }
     }
 
-    IEnumerator Attack() {
+    IEnumerator Attack()
+    {
         while (true)
         {
-            yield return new WaitForSeconds(1f);
             int AttackNumb = Random.Range(1, 4);
+            if (AttackNumb == PrevNumb)
+            {
+                AttackNumb++;
+                if (AttackNumb > 3)
+                {
+                    AttackNumb = 3;
+                }
+            }
+
             if (AttackNumb == 1)
             {
                 StartCoroutine("Attack0");
                 yield return new WaitForSeconds(4f);
-            } else if (AttackNumb == 2)
+            }
+            else if (AttackNumb == 2)
             {
                 StartCoroutine("Attack1");
                 yield return new WaitForSeconds(4.4f);
-            } else if (AttackNumb == 3)
+            }
+            else if (AttackNumb == 3)
             {
                 StartCoroutine("Attack2");
                 yield return new WaitForSeconds(3.5f);
             }
-        } 
+
+            PrevNumb = AttackNumb;
+        }
     }
 
     IEnumerator Attack0()
@@ -156,7 +179,7 @@ public class TMMAI : MonoBehaviour, Shootable
         while (true)
         {
             TMM.destination = RandomFivePostion();
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(2.5f);
         }
     }
 
@@ -170,11 +193,12 @@ public class TMMAI : MonoBehaviour, Shootable
             {
                 currentposition = 0;
             }
-        } else
+        }
+        else
         {
             currentposition = newposition;
         }
-        
+
         return potentialpositions[currentposition];
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class InteractScript : MonoBehaviour
 {
     public Level1TextStuff UIText;
-    public Image interacticon;
+    public Text interacticon;
 
     void Update()
     {

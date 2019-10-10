@@ -13,7 +13,7 @@ using UnityEngine.UI;
 public class TMMAI : MonoBehaviour, Shootable
 {
     //State 
-    private int HP = 200;
+    private int HP = 105;
     private NavMeshAgent TMM;
     private bool Dead;
     private bool FallOver = false;
@@ -27,16 +27,20 @@ public class TMMAI : MonoBehaviour, Shootable
     public GameObject ConeAttack;
     public GameObject ConeAttackB;
     public GameObject BurstAttack;
+    public GameObject P2ConeAttack;
 
     //Audio
     public AudioClip Masku;
     public AudioClip VryVry;
     public AudioClip MiirioKid;
-
-    private int PrevNumb = 0;
     private readonly float ProjectileLife = 1.1f;
     //Cache
     private Vector3 playerlocation;
+    private bool inphase2 = false;
+
+    //Phase 2 stuff
+    public Material bloodskybox;
+    public Light directionallight;
 
     void Start()
     {
@@ -78,6 +82,19 @@ public class TMMAI : MonoBehaviour, Shootable
         HP--;
         Hpbar.value = HP;
         CheckIfDead();
+
+        if (HP < 100)
+        {
+            if (!inphase2)
+            {
+                StopCoroutine("Attack");
+                StartCoroutine("AttackPhase2");
+                RenderSettings.skybox = bloodskybox;
+                inphase2 = true;
+                directionallight.color = new Color(70,0,3);
+                RenderSettings.ambientLight = new Color(137,137,137);
+            }
+        }
     }
 
     private void CheckIfDead()
@@ -102,19 +119,13 @@ public class TMMAI : MonoBehaviour, Shootable
         }
     }
 
+    // Phase 1 Attacks
+
     IEnumerator Attack()
     {
         while (true)
         {
             int AttackNumb = Random.Range(1, 4);
-            if (AttackNumb == PrevNumb)
-            {
-                AttackNumb++;
-                if (AttackNumb > 3)
-                {
-                    AttackNumb = 3;
-                }
-            }
 
             if (AttackNumb == 1)
             {
@@ -131,8 +142,6 @@ public class TMMAI : MonoBehaviour, Shootable
                 StartCoroutine("Attack2");
                 yield return new WaitForSeconds(3.5f);
             }
-
-            PrevNumb = AttackNumb;
         }
     }
 
@@ -173,7 +182,39 @@ public class TMMAI : MonoBehaviour, Shootable
         Destroy(CurrentAttack);
     }
 
+    //Phase 2 Attack Coroutine
+    IEnumerator AttackPhase2()
+    {
+        while (true)
+        {
+            StartCoroutine("P2Attack0");
+            yield return new WaitForSeconds(5f);
+        }
+    }
 
+    IEnumerator P2Attack0()
+    {
+        thisAudioSource.PlayOneShot(MiirioKid);
+        yield return new WaitForSeconds(0.9f);
+        for (int i = 0; i < 5; i++)
+        {
+            StartCoroutine("P2AttackB");
+            yield return new WaitForSeconds(0.5f);
+        }
+    }
+
+    IEnumerator P2AttackB()
+    {
+        GameObject CurrentAttack = Instantiate(ConeAttack, transform.position + new Vector3(0, 0.5f, 0), transform.rotation);
+        yield return new WaitForSeconds(ProjectileLife);
+        Destroy(CurrentAttack);
+    }
+
+
+
+
+
+    //Walk around script
     IEnumerator Wander()
     {
         while (true)

@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 7d4daf3b5585901489900ae0823a0364, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 7d1430089afb5854892670b854d1d684, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -13028,9 +13028,13 @@ MonoBehaviour:
     type: 3}
   BurstAttack: {fileID: 8532679953099735807, guid: a2fd05586c8d8374287a9fda87041deb,
     type: 3}
+  P2ConeAttack: {fileID: 8532679953099735807, guid: 697247a4cc31d8a4a93ab53693b07132,
+    type: 3}
   Masku: {fileID: 8300000, guid: 712a527d931a1b348b2d8c4ba6654482, type: 3}
   VryVry: {fileID: 8300000, guid: aba6b134320d91b45995c91cb1440e96, type: 3}
   MiirioKid: {fileID: 8300000, guid: c82e6da057f977d4f8275aabfc60b712, type: 3}
+  bloodskybox: {fileID: 2100000, guid: 7d4daf3b5585901489900ae0823a0364, type: 2}
+  directionallight: {fileID: 641381608}
 --- !u!82 &2044780357
 AudioSource:
   m_ObjectHideFlags: 0

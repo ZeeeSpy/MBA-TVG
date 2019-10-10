@@ -13,11 +13,12 @@ using UnityEngine.UI;
 public class TMMAI : MonoBehaviour, Shootable
 {
     //State 
-    private int HP = 105;
+    private int HP = 200;
     private NavMeshAgent TMM;
     private bool Dead;
     private bool FallOver = false;
-    private AudioSource thisAudioSource;
+    public AudioSource thisAudioSource;
+    public AudioSource music;
     public Slider Hpbar;
     private int currentposition = 0;
 
@@ -27,13 +28,18 @@ public class TMMAI : MonoBehaviour, Shootable
     public GameObject ConeAttack;
     public GameObject ConeAttackB;
     public GameObject BurstAttack;
-    public GameObject P2ConeAttack;
+    public GameObject Hellsweep;
+    public GameObject UksaMAttack;
 
     //Audio
     public AudioClip Masku;
     public AudioClip VryVry;
     public AudioClip MiirioKid;
-    private readonly float ProjectileLife = 1.1f;
+    public AudioClip hellsweepsound;
+    public AudioClip UksaM;
+
+    public AudioClip ClericBeastMusic;
+    private readonly float ProjectileLife = 1.3f;
     //Cache
     private Vector3 playerlocation;
     private bool inphase2 = false;
@@ -50,7 +56,6 @@ public class TMMAI : MonoBehaviour, Shootable
         potentialpositions[3] = new Vector3(11.02f, 5.38f, 26.35f);
         potentialpositions[4] = new Vector3(-12.28f, 5.38f, 0f);
 
-        thisAudioSource = gameObject.GetComponent<AudioSource>();
         TMM = gameObject.GetComponent<NavMeshAgent>();
 
         playerlocation = GameObject.FindGameObjectWithTag("Player").transform.position;
@@ -89,10 +94,14 @@ public class TMMAI : MonoBehaviour, Shootable
             {
                 StopCoroutine("Attack");
                 StartCoroutine("AttackPhase2");
+                StartCoroutine("Hellsweepcoroutine");
                 RenderSettings.skybox = bloodskybox;
                 inphase2 = true;
                 directionallight.color = new Color(70,0,3);
                 RenderSettings.ambientLight = new Color(137,137,137);
+                music.clip = ClericBeastMusic;
+                music.volume = 0.6f;
+                music.Play();
             }
         }
     }
@@ -104,6 +113,8 @@ public class TMMAI : MonoBehaviour, Shootable
             Dead = true;
             TMM.enabled = false;
             Die();
+            StopCoroutine("AttackPhase2");
+            StopCoroutine("Hellsweepcoroutine");
         }
         else
         {
@@ -130,17 +141,17 @@ public class TMMAI : MonoBehaviour, Shootable
             if (AttackNumb == 1)
             {
                 StartCoroutine("Attack0");
-                yield return new WaitForSeconds(4f);
+                yield return new WaitForSeconds(3.5f);
             }
             else if (AttackNumb == 2)
             {
                 StartCoroutine("Attack1");
-                yield return new WaitForSeconds(4.4f);
+                yield return new WaitForSeconds(3.9f);
             }
             else if (AttackNumb == 3)
             {
                 StartCoroutine("Attack2");
-                yield return new WaitForSeconds(3.5f);
+                yield return new WaitForSeconds(3f);
             }
         }
     }
@@ -182,19 +193,57 @@ public class TMMAI : MonoBehaviour, Shootable
         Destroy(CurrentAttack);
     }
 
+    //
+    //
     //Phase 2 Attack Coroutine
+    //
+    //
+
     IEnumerator AttackPhase2()
     {
         while (true)
         {
-            StartCoroutine("P2Attack0");
-            yield return new WaitForSeconds(5f);
+            int AttackNumb = Random.Range(1, 4);
+
+            if (AttackNumb == 1)
+            {
+                StartCoroutine("P2Attack0");
+                yield return new WaitForSeconds(2.5f);
+            } else if (AttackNumb == 2)
+            {
+                StartCoroutine("Attack1");
+                yield return new WaitForSeconds(3.5f);
+            } else if (AttackNumb == 3)
+            {
+                StartCoroutine("uksaM");
+                yield return new WaitForSeconds(3.5f);
+            }
         }
     }
 
+    IEnumerator uksaM()
+    {
+        thisAudioSource.PlayOneShot(UksaM);
+        yield return new WaitForSeconds(0.9f);
+        for (int i = 0; i < 5; i++)
+        {
+            StartCoroutine("uksaMLaunch");
+            yield return new WaitForSeconds(0.5f);
+        }
+    }
+
+    IEnumerator uksaMLaunch()
+    {
+        GameObject CurrentAttack = Instantiate(UksaMAttack, transform.position + new Vector3(0, 0.5f, 0), transform.rotation);
+        yield return new WaitForSeconds(ProjectileLife);
+        Destroy(CurrentAttack);
+    }
+
+
+
     IEnumerator P2Attack0()
     {
-        thisAudioSource.PlayOneShot(MiirioKid);
+        thisAudioSource.PlayOneShot(Masku);
         yield return new WaitForSeconds(0.9f);
         for (int i = 0; i < 5; i++)
         {
@@ -210,6 +259,24 @@ public class TMMAI : MonoBehaviour, Shootable
         Destroy(CurrentAttack);
     }
 
+
+    IEnumerator Hellsweepcoroutine()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(Random.Range(3, 5));
+            StartCoroutine("HellSweep");
+            yield return new WaitForSeconds(1f);
+        }
+    }
+
+    IEnumerator HellSweep()
+    {
+        thisAudioSource.PlayOneShot(hellsweepsound);
+        GameObject CurrentAttack = Instantiate(Hellsweep, transform.position + new Vector3(0, -9f, 0), transform.rotation);
+        yield return new WaitForSeconds(ProjectileLife);
+        Destroy(CurrentAttack);
+    }
 
 
 
@@ -242,4 +309,6 @@ public class TMMAI : MonoBehaviour, Shootable
 
         return potentialpositions[currentposition];
     }
+
+
 }

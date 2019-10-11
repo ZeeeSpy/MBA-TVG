@@ -110,14 +110,17 @@ public class TMMAI : MonoBehaviour, Shootable
     {
         if (HP <= 0)
         {
-            Dead = true;
-            TMM.enabled = false;
-            StopCoroutine("AttackPhase2");
-            StopCoroutine("Hellsweepcoroutine");
-            StopCoroutine("Wander");
-            music.Stop();
-            thisAudioSource.Stop();
-            StartCoroutine("DieCoroutine");
+            if (!Dead)
+            {
+                Dead = true;
+                TMM.enabled = false;
+                StopCoroutine("AttackPhase2");
+                StopCoroutine("Hellsweepcoroutine");
+                StopCoroutine("Wander");
+                music.Stop();
+                thisAudioSource.Stop();
+                StartCoroutine("DieCoroutine");
+            }
         }
         else
         {

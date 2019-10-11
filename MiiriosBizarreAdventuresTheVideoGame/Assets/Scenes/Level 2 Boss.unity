@@ -13616,6 +13616,7 @@ MonoBehaviour:
   MiirioKid: {fileID: 8300000, guid: c82e6da057f977d4f8275aabfc60b712, type: 3}
   hellsweepsound: {fileID: 8300000, guid: 61a7a2936e0900f43a04683860271b9d, type: 3}
   UksaM: {fileID: 8300000, guid: 98386a818992fb54f87badd64bea5cda, type: 3}
+  Bye: {fileID: 8300000, guid: 7ba4ea41d85e10a40aa59f26ee833e93, type: 3}
   ClericBeastMusic: {fileID: 8300000, guid: 90b9571b4d767d94fad0c72fbf5e1c77, type: 3}
   bloodskybox: {fileID: 2100000, guid: 7d4daf3b5585901489900ae0823a0364, type: 2}
   directionallight: {fileID: 641381608}

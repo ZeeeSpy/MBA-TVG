@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fbc472f3eec564a8114f4adc87e02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileDamage: 5
+  ProjectileDamage: 3
 --- !u!54 &3065130324404388864
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fbc472f3eec564a8114f4adc87e02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileDamage: 5
+  ProjectileDamage: 3
 --- !u!54 &808871397441517772
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -355,7 +355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fbc472f3eec564a8114f4adc87e02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileDamage: 5
+  ProjectileDamage: 3
 --- !u!54 &156844398111207636
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -479,7 +479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fbc472f3eec564a8114f4adc87e02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileDamage: 5
+  ProjectileDamage: 3
 --- !u!54 &544192084369585052
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -603,7 +603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fbc472f3eec564a8114f4adc87e02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileDamage: 5
+  ProjectileDamage: 3
 --- !u!54 &4068700000839198121
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -727,7 +727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fbc472f3eec564a8114f4adc87e02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileDamage: 5
+  ProjectileDamage: 3
 --- !u!54 &1701786665507371124
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -851,7 +851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fbc472f3eec564a8114f4adc87e02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileDamage: 5
+  ProjectileDamage: 3
 --- !u!54 &3283504935785251131
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -975,7 +975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fbc472f3eec564a8114f4adc87e02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileDamage: 5
+  ProjectileDamage: 3
 --- !u!54 &4344323406633167767
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1099,7 +1099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fbc472f3eec564a8114f4adc87e02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileDamage: 5
+  ProjectileDamage: 3
 --- !u!54 &3687951558626086465
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1223,7 +1223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fbc472f3eec564a8114f4adc87e02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileDamage: 5
+  ProjectileDamage: 3
 --- !u!54 &441135592889782194
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1347,7 +1347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fbc472f3eec564a8114f4adc87e02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileDamage: 5
+  ProjectileDamage: 3
 --- !u!54 &6141340957584404295
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1471,7 +1471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fbc472f3eec564a8114f4adc87e02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileDamage: 5
+  ProjectileDamage: 3
 --- !u!54 &7617148543600963214
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1595,7 +1595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fbc472f3eec564a8114f4adc87e02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileDamage: 5
+  ProjectileDamage: 3
 --- !u!54 &6652971053088019362
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1794,7 +1794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fbc472f3eec564a8114f4adc87e02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileDamage: 5
+  ProjectileDamage: 3
 --- !u!54 &5226918142706329595
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1918,7 +1918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fbc472f3eec564a8114f4adc87e02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileDamage: 5
+  ProjectileDamage: 3
 --- !u!54 &7129183299225413348
 Rigidbody:
   m_ObjectHideFlags: 0

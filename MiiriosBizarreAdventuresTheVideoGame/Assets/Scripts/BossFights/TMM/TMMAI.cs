@@ -16,7 +16,6 @@ public class TMMAI : MonoBehaviour, Shootable
     private int HP = 200;
     private NavMeshAgent TMM;
     private bool Dead;
-    private bool FallOver = false;
     public AudioSource thisAudioSource;
     public AudioSource music;
     public Slider Hpbar;
@@ -37,6 +36,7 @@ public class TMMAI : MonoBehaviour, Shootable
     public AudioClip MiirioKid;
     public AudioClip hellsweepsound;
     public AudioClip UksaM;
+    public AudioClip Bye;
 
     public AudioClip ClericBeastMusic;
     private readonly float ProjectileLife = 1.3f;
@@ -112,9 +112,12 @@ public class TMMAI : MonoBehaviour, Shootable
         {
             Dead = true;
             TMM.enabled = false;
-            Die();
             StopCoroutine("AttackPhase2");
             StopCoroutine("Hellsweepcoroutine");
+            StopCoroutine("Wander");
+            music.Stop();
+            thisAudioSource.Stop();
+            StartCoroutine("DieCoroutine");
         }
         else
         {
@@ -122,13 +125,14 @@ public class TMMAI : MonoBehaviour, Shootable
         }
     }
 
-    private void Die()
+    IEnumerator DieCoroutine()
     {
-        if (!FallOver)
-        {
-            FallOver = true;
-        }
+        yield return new WaitForSeconds(1f);
+        thisAudioSource.PlayOneShot(Bye);
+        yield return new WaitForSeconds(2f);
+        Destroy(gameObject);
     }
+
 
     // Phase 1 Attacks
 

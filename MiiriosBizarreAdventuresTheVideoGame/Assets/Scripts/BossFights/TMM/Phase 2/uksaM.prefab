@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fbc472f3eec564a8114f4adc87e02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileDamage: 3
+  ProjectileDamage: 2
 --- !u!54 &5455386715443000303
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fbc472f3eec564a8114f4adc87e02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileDamage: 3
+  ProjectileDamage: 2
 --- !u!54 &4973986159378427610
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -355,7 +355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fbc472f3eec564a8114f4adc87e02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileDamage: 3
+  ProjectileDamage: 2
 --- !u!54 &1452511461676731422
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -479,7 +479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fbc472f3eec564a8114f4adc87e02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileDamage: 3
+  ProjectileDamage: 2
 --- !u!54 &5475987626615387689
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -603,7 +603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fbc472f3eec564a8114f4adc87e02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileDamage: 3
+  ProjectileDamage: 2
 --- !u!54 &2676532018835472581
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -727,7 +727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fbc472f3eec564a8114f4adc87e02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileDamage: 3
+  ProjectileDamage: 2
 --- !u!54 &5911962981783736874
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -919,7 +919,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fbc472f3eec564a8114f4adc87e02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileDamage: 3
+  ProjectileDamage: 2
 --- !u!54 &3949924340073083136
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1043,7 +1043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fbc472f3eec564a8114f4adc87e02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileDamage: 3
+  ProjectileDamage: 2
 --- !u!54 &5226918142706329595
 Rigidbody:
   m_ObjectHideFlags: 0

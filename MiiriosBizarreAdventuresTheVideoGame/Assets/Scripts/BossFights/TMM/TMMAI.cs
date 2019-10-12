@@ -37,16 +37,26 @@ public class TMMAI : MonoBehaviour, Shootable
     public AudioClip hellsweepsound;
     public AudioClip UksaM;
     public AudioClip Bye;
+    public AudioClip Phase3Scream;
 
     public AudioClip ClericBeastMusic;
     private readonly float ProjectileLife = 1.3f;
     //Cache
     private Vector3 playerlocation;
+    private bool inphase3 = false;
     private bool inphase2 = false;
 
     //Phase 2 stuff
     public Material bloodskybox;
     public Light directionallight;
+    public Material normalskybox;
+
+    public Sprite Phase2Face;
+    public Sprite Phase3Face;
+    private SpriteRenderer TSR;
+
+    private bool previousattackwasmasku = false;
+    private bool previousattackwasuksam = false;
 
     void Start()
     {
@@ -57,6 +67,7 @@ public class TMMAI : MonoBehaviour, Shootable
         potentialpositions[4] = new Vector3(-12.28f, 5.38f, 0f);
 
         TMM = gameObject.GetComponent<NavMeshAgent>();
+        TSR = gameObject.GetComponent<SpriteRenderer>();
 
         playerlocation = GameObject.FindGameObjectWithTag("Player").transform.position;
         StartCoroutine("Wander");
@@ -87,18 +98,28 @@ public class TMMAI : MonoBehaviour, Shootable
         HP--;
         Hpbar.value = HP;
         CheckIfDead();
-
         if (HP < 100)
         {
             if (!inphase2)
             {
+                StartCoroutine("Hellsweepcoroutine");
+                TSR.sprite = Phase2Face;
+                inphase2 = true;
+
+            }
+        }
+        if (HP < 50)
+        {
+            if (!inphase3)
+            {
                 StopCoroutine("Attack");
                 StartCoroutine("AttackPhase2");
-                StartCoroutine("Hellsweepcoroutine");
                 RenderSettings.skybox = bloodskybox;
-                inphase2 = true;
+                inphase3 = true;
                 directionallight.color = new Color(70,0,3);
                 RenderSettings.ambientLight = new Color(137,137,137);
+                TSR.sprite = Phase3Face;
+                thisAudioSource.PlayOneShot(Phase3Scream);
                 music.clip = ClericBeastMusic;
                 music.volume = 0.6f;
                 music.Play();
@@ -133,6 +154,9 @@ public class TMMAI : MonoBehaviour, Shootable
         yield return new WaitForSeconds(1f);
         thisAudioSource.PlayOneShot(Bye);
         yield return new WaitForSeconds(2f);
+        directionallight.color = new Color(1f,0.949f,0.627f,1f);
+        RenderSettings.ambientLight = new Color(1f,1f,1f,1f);
+        RenderSettings.skybox = normalskybox;
         Destroy(gameObject);
     }
 
@@ -214,14 +238,28 @@ public class TMMAI : MonoBehaviour, Shootable
 
             if (AttackNumb == 1)
             {
+                if (previousattackwasuksam)
+                {
+                    yield return new WaitForSeconds(0.5f); 
+                }
+                previousattackwasmasku = true;
+                previousattackwasuksam = false;
                 StartCoroutine("P2Attack0");
                 yield return new WaitForSeconds(2.5f);
             } else if (AttackNumb == 2)
             {
+                previousattackwasmasku = false;
+                previousattackwasuksam = false;
                 StartCoroutine("Attack1");
                 yield return new WaitForSeconds(3.5f);
             } else if (AttackNumb == 3)
             {
+                if (previousattackwasmasku)
+                {
+                    yield return new WaitForSeconds(0.5f);
+                }
+                previousattackwasmasku = false;
+                previousattackwasuksam = true;
                 StartCoroutine("uksaM");
                 yield return new WaitForSeconds(3.5f);
             }

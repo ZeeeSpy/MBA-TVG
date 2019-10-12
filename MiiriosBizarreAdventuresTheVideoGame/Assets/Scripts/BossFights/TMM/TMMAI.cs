@@ -58,6 +58,9 @@ public class TMMAI : MonoBehaviour, Shootable
     private bool previousattackwasmasku = false;
     private bool previousattackwasuksam = false;
 
+    public GameObject Stufftoenable;
+    public GameObject Stufftodisable;
+
     void Start()
     {
         potentialpositions[0] = new Vector3(-33.68f, 5.38f, -26.8f);
@@ -157,6 +160,8 @@ public class TMMAI : MonoBehaviour, Shootable
         directionallight.color = new Color(1f,0.949f,0.627f,1f);
         RenderSettings.ambientLight = new Color(1f,1f,1f,1f);
         RenderSettings.skybox = normalskybox;
+        Stufftodisable.SetActive(false);
+        Stufftoenable.SetActive(true);
         Destroy(gameObject);
     }
 

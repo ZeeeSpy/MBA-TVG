@@ -28,6 +28,7 @@ public class PlayerScript : MonoBehaviour
         GameOverAudio.PlayOneShot(Oof); 
         if (HP <= 0)
         {
+            RankUIImage.sprite = RankArray[0];
             PlayerDead();
         } else
         {

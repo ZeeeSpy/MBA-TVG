@@ -141,6 +141,9 @@ public class TMMAI : MonoBehaviour, Shootable
                 StopCoroutine("AttackPhase2");
                 StopCoroutine("Hellsweepcoroutine");
                 StopCoroutine("Wander");
+                StopCoroutine("P2Attack0");
+                StopCoroutine("Attack1");
+                StopCoroutine("uksaM");
                 music.Stop();
                 thisAudioSource.Stop();
                 StartCoroutine("DieCoroutine");

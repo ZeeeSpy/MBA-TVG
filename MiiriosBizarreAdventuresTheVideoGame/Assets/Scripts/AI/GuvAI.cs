@@ -104,6 +104,7 @@ public class GuvAI : MonoBehaviour, Shootable
             FallOver = true;
             StopCoroutine("B1");
             GetComponent<BoxCollider>().enabled = false;
+            StartCoroutine("SaveMemory");
         }
     }
 
@@ -129,5 +130,11 @@ public class GuvAI : MonoBehaviour, Shootable
         thisAudioSource.PlayOneShot(AttackSFX[Random.Range(0, AttackSFX.Length)]);
         yield return new WaitForSeconds(2);
         Destroy(CurrnetAttack);
+    }
+
+    IEnumerator SaveMemory()
+    {
+        yield return new WaitForSeconds(5f);
+        Destroy(gameObject);
     }
 }

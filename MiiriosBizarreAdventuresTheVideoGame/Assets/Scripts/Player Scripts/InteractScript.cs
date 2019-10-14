@@ -38,4 +38,9 @@ public class InteractScript : MonoBehaviour
     {
         UIText.showtext(hit.collider.GetComponent<Interactable>().InteractWithObject());
     }
+
+    public void DiplayText(string textodisp)
+    {
+        UIText.showtext(textodisp);
+    }
 }

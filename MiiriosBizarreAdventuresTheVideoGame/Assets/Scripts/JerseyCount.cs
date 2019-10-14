@@ -24,4 +24,9 @@ public class JerseyCount : MonoBehaviour
     {
         thistext.text = (currentcount.ToString() + denominator);
     }
+
+    public int GetCount()
+    {
+        return currentcount;
+    }
 }

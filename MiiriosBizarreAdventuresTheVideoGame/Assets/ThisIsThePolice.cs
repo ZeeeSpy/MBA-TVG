@@ -11,6 +11,7 @@ public class ThisIsThePolice : MonoBehaviour
     public GameObject Guv;
     public AudioSource playeraudio;
     private JerseyCount count;
+    public GameObject GetAwayStuff;
 
     private int guvspawnrate = 5;
 
@@ -60,7 +61,13 @@ public class ThisIsThePolice : MonoBehaviour
         yield return new WaitForSeconds(7.5f); 
         scripttodisplaytext.DiplayText("It'll take them a minuite to get here. Gotta hold out until then");
         yield return new WaitForSeconds(30f);
-        StartCoroutine("GetAwayArrived");
+        GetAwayArrived();
+    }
+
+    private void GetAwayArrived()
+    {
+        GetAwayStuff.SetActive(true);
+        scripttodisplaytext.DiplayText("I think I heard my getaway pull up just now. Lets get out of here");
     }
 
     private void Update()

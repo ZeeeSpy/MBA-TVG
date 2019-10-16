@@ -9,7 +9,6 @@ public class GoForward : MonoBehaviour
     private readonly float rightmostlismit = -4.3f;
     private readonly float turnspeed = 0.4f;
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         Vector3 direction = new Vector3(0,0,1);

@@ -9,8 +9,13 @@ public class RoadSpawningScript : MonoBehaviour
     private int roadnumb = 0;
     private readonly int roadspawnlimit = 10;
     private GameObject[] currentroads = new GameObject[10];
+    public GameObject startingroad;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        StartCoroutine("DestroyRoads");
+    }
+
     void Update()
     {
         if (player.position.z > (roadnumb * 100))
@@ -22,5 +27,11 @@ public class RoadSpawningScript : MonoBehaviour
             }
             currentroads[roadnumb % roadspawnlimit] = Instantiate(road, transform.position + new Vector3(0, 0, ((100 * roadnumb)+400)), transform.rotation);
         }
+    }
+
+    IEnumerator DestroyRoads()
+    {
+        yield return new WaitForSeconds(1f);
+        Destroy(startingroad);
     }
 }

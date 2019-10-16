@@ -18,18 +18,20 @@ public class ShootingScript : MonoBehaviour
             BulletScript();
         }
 
-        
+
     }
 
     public void BulletScript()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward*100000, out hit)){
-                Shootable ObjectThatWasShot = hit.collider.GetComponent<Shootable>();
-                if (ObjectThatWasShot != null)
-                {
-                    ObjectThatWasShot.GetShot();
-                }
+        if (Physics.Raycast(transform.position, transform.forward * 100000, out hit))
+        {
+            Shootable ObjectThatWasShot = hit.collider.GetComponent<Shootable>();
+
+            if (ObjectThatWasShot != null)
+            {
+                ObjectThatWasShot.GetShot();
+            }
         }
     }
 }

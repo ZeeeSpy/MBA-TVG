@@ -5,8 +5,8 @@ using UnityEngine;
 public class GoForward : MonoBehaviour
 {
     private readonly int speed = 20;
-    private readonly float leftmostlimit = 4.3f;
-    private readonly float rightmostlismit = -4.3f;
+    private readonly float leftmostlimit = 8.3f;
+    private readonly float rightmostlismit = -8.3f;
     private readonly float turnspeed = 0.4f;
 
     void FixedUpdate()

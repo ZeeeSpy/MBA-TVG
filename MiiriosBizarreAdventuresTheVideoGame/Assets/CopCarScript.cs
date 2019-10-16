@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CopCarScript : MonoBehaviour
+public class CopCarScript : MonoBehaviour, Shootable
 {
     private readonly int speed = 20;
     bool caughtup = false;
     private Transform player;
     private int range;
+    private int HP = 20;
+    private int position;
+    private CopCarSpawner spawner;
 
     private void Start()
     {
@@ -29,6 +32,26 @@ public class CopCarScript : MonoBehaviour
         else
         {
             transform.Translate(transform.forward * speed * Time.deltaTime);
+        }
+    }
+
+    public void SetUpCar(int pos,CopCarSpawner incspawner)
+    {
+        position = pos;
+        spawner = incspawner;
+    }
+
+    public void GetShot()
+    {
+        if (caughtup)
+        {
+            HP--;
+
+            if (HP <= 0)
+            {
+                spawner.ReleasePosition(position);
+                Destroy(transform.parent.gameObject);
+            }
         }
     }
 }

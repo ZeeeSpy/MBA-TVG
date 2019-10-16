@@ -21,7 +21,6 @@ public class RoadSpawningScript : MonoBehaviour
                 Destroy(currentroads[roadnumb % roadspawnlimit]);
             }
             currentroads[roadnumb % roadspawnlimit] = Instantiate(road, transform.position + new Vector3(0, 0, ((100 * roadnumb)+400)), transform.rotation);
-            Debug.Log(roadnumb);
         }
     }
 }

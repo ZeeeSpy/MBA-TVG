@@ -464,6 +464,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ambulance
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7414dfcf01b23c34396042506790f60c, type: 3}
+      propertyPath: m_TagString
+      value: Ambulance
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7414dfcf01b23c34396042506790f60c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.76
@@ -1072,6 +1076,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2146107631629087427, guid: cbc2200382e0fad44ad524139fb80779,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbc2200382e0fad44ad524139fb80779, type: 3}

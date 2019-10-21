@@ -11,6 +11,9 @@ public class CopCarScript : MonoBehaviour, Shootable
     private int HP = 20;
     private int position;
     private CopCarSpawner spawner;
+    public GameObject attack;
+    private readonly int force = 50;
+    private Vector3 playerlocation;
 
     private void Start()
     {
@@ -27,12 +30,15 @@ public class CopCarScript : MonoBehaviour, Shootable
             if ((player.position - transform.position).magnitude < range)
             {
                 caughtup = true;
+                StartCoroutine("Attack");
             }
         }
         else
         {
             transform.Translate(transform.forward * speed * Time.deltaTime);
         }
+
+        playerlocation = player.position;
     }
 
     public void SetUpCar(int pos,CopCarSpawner incspawner)
@@ -54,4 +60,21 @@ public class CopCarScript : MonoBehaviour, Shootable
             }
         }
     }
+
+    IEnumerator Attack()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(Random.Range(0.5f, 2.5f));
+            {
+                yield return new WaitForSeconds(0.2f);
+                GameObject CurrentAttack = Instantiate(attack, transform.position + new Vector3(0, 0.5f, 0), transform.rotation);
+                CurrentAttack.GetComponent<Rigidbody>().AddForce((playerlocation - transform.position + new Vector3(0,0,20)) * force);
+                //Play audio?
+                yield return new WaitForSeconds(2);
+                Destroy(CurrentAttack);
+            }
+        }
+    }
+
 }

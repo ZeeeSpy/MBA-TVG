@@ -6,7 +6,6 @@ public class LeftRight : MonoBehaviour
 {
     private bool sway = false;
     //sway false = left relative to helicopter
-    private bool pause = false;
     public HeliCopterSway thissway;
 
     void Start()

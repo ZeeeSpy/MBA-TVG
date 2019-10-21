@@ -6,7 +6,6 @@ TagManager:
   tags:
   - World
   - CopCarCoordinator
-  - Ambulance
   layers:
   - Default
   - TransparentFX

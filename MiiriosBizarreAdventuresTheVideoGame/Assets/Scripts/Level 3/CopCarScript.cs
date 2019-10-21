@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CopCarScript : MonoBehaviour, Shootable
 {
-    private readonly int speed = 20;
     bool caughtup = false;
     private Transform player;
     private int range;
@@ -26,16 +25,12 @@ public class CopCarScript : MonoBehaviour, Shootable
     {
         if (!caughtup)
         {
-            transform.Translate(transform.forward * 75 * Time.deltaTime);
+            transform.Translate(transform.forward * 50 * Time.deltaTime);
             if ((player.position - transform.position).magnitude < range)
             {
                 caughtup = true;
                 StartCoroutine("Attack");
             }
-        }
-        else
-        {
-            transform.Translate(transform.forward * speed * Time.deltaTime);
         }
 
         playerlocation = player.position;
@@ -67,9 +62,8 @@ public class CopCarScript : MonoBehaviour, Shootable
         {
             yield return new WaitForSeconds(Random.Range(0.5f, 2.5f));
             {
-                yield return new WaitForSeconds(0.2f);
-                GameObject CurrentAttack = Instantiate(attack, transform.position + new Vector3(0, 0.5f, 0), transform.rotation);
-                CurrentAttack.GetComponent<Rigidbody>().AddForce((playerlocation - transform.position + new Vector3(0,0,20)) * force);
+                GameObject CurrentAttack = Instantiate(attack, transform.position + new Vector3(0, 1f, 0), transform.rotation);
+                CurrentAttack.GetComponent<Rigidbody>().AddForce((playerlocation - transform.position) * force);
                 //Play audio?
                 yield return new WaitForSeconds(2);
                 Destroy(CurrentAttack);

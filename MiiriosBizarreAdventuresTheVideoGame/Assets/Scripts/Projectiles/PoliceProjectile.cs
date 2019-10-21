@@ -16,7 +16,6 @@ public class PoliceProjectile : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
-            Debug.Log("HitPlayer");
             other.GetComponent<PlayerScript>().Damage(ProjectileDamage);
             Destroy(gameObject);
         }

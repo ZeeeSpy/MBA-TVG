@@ -18,23 +18,23 @@ public class LeftRight : MonoBehaviour
     {
         while (true)
         {
-            if (transform.position.x > 16) //Gone too far right
-            {
-                sway = false;
-                thissway.toggledirection(false);
-            }
-            else if (transform.position.x < -16)
-            {
-                sway = false;
-                thissway.toggledirection(false);
-            }
-            else
-            {
-                sway = !sway;
-                thissway.toggledirection();
-            }
+            float range = Random.Range(1f, 3.6f);
+            //Sway to one direction distance X
+            //Sway back distance X * 2 to mirror the sway
+            //Sway back distance x to get back to center
+            //repeat
 
-            yield return new WaitForSeconds(Random.Range(1, 6));
+            sway = !sway;
+            thissway.toggledirection();
+            yield return new WaitForSeconds(range);
+
+            sway = !sway;
+            thissway.toggledirection();
+            yield return new WaitForSeconds(range*2);
+
+            sway = !sway;
+            thissway.toggledirection();
+            yield return new WaitForSeconds(range);
         }
     }
 
@@ -42,8 +42,9 @@ public class LeftRight : MonoBehaviour
     {
         if (sway)
         {
-            transform.Translate(new Vector3(1,0,0) * 5 * Time.deltaTime);
-        } else
+            transform.Translate(new Vector3(1, 0, 0) * 5 * Time.deltaTime);
+        }
+        else
         {
             transform.Translate(new Vector3(-1, 0, 0) * 5 * Time.deltaTime);
         }

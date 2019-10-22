@@ -66,13 +66,10 @@ public class CopCarScript : MonoBehaviour, Shootable
     {
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(0.5f, 1f));
+            yield return new WaitForSeconds(0.5f);
             {
                 GameObject CurrentAttack = Instantiate(attack, transform.position + new Vector3(0, 1f, 0), transform.rotation);
                 CurrentAttack.GetComponent<Rigidbody>().AddForce((playerlocation - transform.position) * force);
-                //Play audio?
-                yield return new WaitForSeconds(2);
-                Destroy(CurrentAttack);
             }
         }
     }

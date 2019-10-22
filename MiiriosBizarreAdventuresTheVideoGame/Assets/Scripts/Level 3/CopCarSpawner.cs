@@ -46,7 +46,7 @@ public class CopCarSpawner : MonoBehaviour
                 currentspawn.GetComponentInChildren<CopCarScript>().SetUpCar(spawnloc,this);
                 spacetaken[spawnloc] = true;
             }
-            yield return new WaitForSeconds(Random.Range(3, 10));
+            yield return new WaitForSeconds(Random.Range(3, 9));
         }
     }
 

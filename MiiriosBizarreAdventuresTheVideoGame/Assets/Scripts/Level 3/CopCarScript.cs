@@ -13,6 +13,7 @@ public class CopCarScript : MonoBehaviour, Shootable
     public GameObject attack;
     private readonly int force = 50;
     private Vector3 playerlocation;
+    public GameObject particles;
 
     private void Start()
     {
@@ -53,6 +54,11 @@ public class CopCarScript : MonoBehaviour, Shootable
                 spawner.ReleasePosition(position);
                 Destroy(transform.parent.gameObject);
             }
+
+            if (HP <= 10)
+            {
+                particles.SetActive(true);
+            }
         }
     }
 
@@ -60,7 +66,7 @@ public class CopCarScript : MonoBehaviour, Shootable
     {
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(0.5f, 2.5f));
+            yield return new WaitForSeconds(Random.Range(0.5f, 1f));
             {
                 GameObject CurrentAttack = Instantiate(attack, transform.position + new Vector3(0, 1f, 0), transform.rotation);
                 CurrentAttack.GetComponent<Rigidbody>().AddForce((playerlocation - transform.position) * force);

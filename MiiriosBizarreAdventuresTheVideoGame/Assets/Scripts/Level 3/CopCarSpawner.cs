@@ -14,7 +14,14 @@ public class CopCarSpawner : MonoBehaviour
         {
             spacetaken[i] = false;
         }
+        UpdateZLocation();
 
+        StartCoroutine("Delay");
+    }
+
+    IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(5);
         StartCoroutine("SpawnCopCar");
     }
 
@@ -22,8 +29,6 @@ public class CopCarSpawner : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(3, 10));
-            UpdateZLocation();
             int spawnloc = -1;
 
             for (int i = 0; i < spacetaken.Length; i++)
@@ -41,6 +46,7 @@ public class CopCarSpawner : MonoBehaviour
                 currentspawn.GetComponentInChildren<CopCarScript>().SetUpCar(spawnloc,this);
                 spacetaken[spawnloc] = true;
             }
+            yield return new WaitForSeconds(Random.Range(3, 10));
         }
     }
 

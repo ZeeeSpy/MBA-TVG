@@ -33,8 +33,6 @@ public class CopCarScript : MonoBehaviour, Shootable
                 StartCoroutine("Attack");
             }
         }
-
-        playerlocation = player.position;
     }
 
     public void SetUpCar(int pos,CopCarSpawner incspawner)
@@ -68,6 +66,7 @@ public class CopCarScript : MonoBehaviour, Shootable
         {
             yield return new WaitForSeconds(0.5f);
             {
+                playerlocation = player.position;
                 GameObject CurrentAttack = Instantiate(attack, transform.position + new Vector3(0, 1f, 0), transform.rotation);
                 CurrentAttack.GetComponent<Rigidbody>().AddForce((playerlocation - transform.position) * force);
             }

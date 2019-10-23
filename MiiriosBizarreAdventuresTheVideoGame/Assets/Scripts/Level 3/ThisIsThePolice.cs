@@ -40,16 +40,23 @@ public class ThisIsThePolice : MonoBehaviour
     }
 
     IEnumerator SpawnGuvs() {
+        int LeiCount = 0;
         while (true)
         {
             yield return new WaitForSeconds(Random.Range(1, guvspawnrate));
             int spawnpos = Random.Range(0, 2);
-            if (spawnpos == 0)
+            if (LeiCount < 50)
             {
-                Instantiate(Guv, transform.position + new Vector3(-53, 0, -15), transform.rotation);
-            } else
-            {
-                Instantiate(Guv, transform.position + new Vector3(0, 0, 15), transform.rotation);
+                if (spawnpos == 0)
+                {
+                    Instantiate(Guv, transform.position + new Vector3(-53, 0, -15), transform.rotation);
+                    LeiCount++;
+                }
+                else
+                {
+                    Instantiate(Guv, transform.position + new Vector3(0, 0, 15), transform.rotation);
+                    LeiCount++;
+                }
             }
         }
     }

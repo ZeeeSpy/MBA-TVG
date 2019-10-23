@@ -45,7 +45,7 @@ public class ThisIsThePolice : MonoBehaviour
         {
             yield return new WaitForSeconds(Random.Range(1, guvspawnrate));
             int spawnpos = Random.Range(0, 2);
-            if (LeiCount < 50)
+            if (LeiCount < 25)//Max Lei count
             {
                 if (spawnpos == 0)
                 {

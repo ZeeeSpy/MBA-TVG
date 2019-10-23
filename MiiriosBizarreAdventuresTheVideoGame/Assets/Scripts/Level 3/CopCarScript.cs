@@ -7,11 +7,11 @@ public class CopCarScript : MonoBehaviour, Shootable
     bool caughtup = false;
     private Transform player;
     private int range;
-    private int HP = 20;
+    private int HP = 10;
     private int position;
     private CopCarSpawner spawner;
     public GameObject attack;
-    private readonly int force = 50;
+    private readonly int force = 75;
     private Vector3 playerlocation;
     public GameObject particles;
 
@@ -55,7 +55,7 @@ public class CopCarScript : MonoBehaviour, Shootable
                 Destroy(transform.parent.gameObject);
             }
 
-            if (HP <= 10)
+            if (HP <= 5)
             {
                 particles.SetActive(true);
             }

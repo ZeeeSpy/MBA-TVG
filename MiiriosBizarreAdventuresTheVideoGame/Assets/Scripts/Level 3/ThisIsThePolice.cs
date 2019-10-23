@@ -46,7 +46,7 @@ public class ThisIsThePolice : MonoBehaviour
             int spawnpos = Random.Range(0, 2);
             if (spawnpos == 0)
             {
-                Instantiate(Guv, transform.position + new Vector3(0, 0, -15), transform.rotation);
+                Instantiate(Guv, transform.position + new Vector3(-53, 0, -15), transform.rotation);
             } else
             {
                 Instantiate(Guv, transform.position + new Vector3(0, 0, 15), transform.rotation);

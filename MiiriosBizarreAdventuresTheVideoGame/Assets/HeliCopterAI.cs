@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class HeliCopterAI : MonoBehaviour, Shootable
 {
-    private int HP = 150;
+    private int HP = 200;
     public Slider BossHPSlider;
     private AudioSource AS;
     private bool IntroDone = false;

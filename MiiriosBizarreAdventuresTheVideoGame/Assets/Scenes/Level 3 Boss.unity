@@ -198,12 +198,13 @@ MonoBehaviour:
   evi3: {fileID: 8300000, guid: e4c4e4dd3fa932f4bbece95278561a00, type: 3}
   evi4: {fileID: 8300000, guid: c493e8f3ad9fd4f4a805f1dc797255ef, type: 3}
   evi5: {fileID: 8300000, guid: 47accf665b322564990e52da34acce2d, type: 3}
+  evi6: {fileID: 8300000, guid: cb544c38cbaf14b45a182bf27d3d139b, type: 3}
   eviobj1: {fileID: 7359616386799165406, guid: 78ca46f98712af84795afa2c8305ce89, type: 3}
   eviobj2: {fileID: 7359616386799165406, guid: 95a39f3ac6f1e254292d5d509fa1995a, type: 3}
   eviobj3: {fileID: 7359616386799165406, guid: e11a7f601832b2341b5fb0c49f874e7b, type: 3}
   eviobj4: {fileID: 7359616386799165406, guid: b3d1cd4e860d5554cb4be29ea57de409, type: 3}
   eviobj5: {fileID: 7359616386799165406, guid: 0a9f49399cd88024abc83a1f28561d10, type: 3}
-  eviobj6: {fileID: 0}
+  eviobj6: {fileID: 7359616386799165406, guid: 52f13ff4a662d0e4fb450dc6654e8442, type: 3}
 --- !u!82 &5774650
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14653,6 +14654,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Core
       objectReference: {fileID: 0}
+    - target: {fileID: 4643302886134217846, guid: cbc2200382e0fad44ad524139fb80779,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2146107631634599299, guid: cbc2200382e0fad44ad524139fb80779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14692,11 +14698,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 4.675
-      objectReference: {fileID: 0}
-    - target: {fileID: 4643302886134217846, guid: cbc2200382e0fad44ad524139fb80779,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2146107631572678953, guid: cbc2200382e0fad44ad524139fb80779,
         type: 3}

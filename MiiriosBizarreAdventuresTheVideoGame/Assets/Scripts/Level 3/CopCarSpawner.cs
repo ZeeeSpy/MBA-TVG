@@ -63,4 +63,9 @@ public class CopCarSpawner : MonoBehaviour
     {
         spacetaken[position] = false;
     }
+
+    public void StopCopCarSpawn()
+    {
+        StopCoroutine("SpawnCopCar");
+    }
 }

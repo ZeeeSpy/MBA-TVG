@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class HeliCopterAI : MonoBehaviour, Shootable
@@ -20,6 +21,7 @@ public class HeliCopterAI : MonoBehaviour, Shootable
     public AudioClip evi3;
     public AudioClip evi4;
     public AudioClip evi5;
+    public AudioClip evi6;
 
     public GameObject eviobj1;
     public GameObject eviobj2;
@@ -28,6 +30,7 @@ public class HeliCopterAI : MonoBehaviour, Shootable
     public GameObject eviobj5;
     public GameObject eviobj6;
 
+    private CopCarSpawner CCS;
 
     private Transform player;
     private Vector3 playerlocation;
@@ -41,6 +44,7 @@ public class HeliCopterAI : MonoBehaviour, Shootable
 
     void Start()
     {
+        CCS = GameObject.FindWithTag("CopCarCoordinator").GetComponent<CopCarSpawner>();
         StartCoroutine("JaakieStart");
         player = GameObject.FindWithTag("Player").transform;
     }
@@ -87,6 +91,23 @@ public class HeliCopterAI : MonoBehaviour, Shootable
                 AS2.PlayOneShot(evi5);
                 StartCoroutine(ShootEvidence(eviobj5));
             }
+
+            if (HP <= 0 && !evidence6)
+            {
+                evidence6 = true;
+                AS.Stop();
+                AS2.PlayOneShot(evi6);
+                StartCoroutine(ShootEvidence(eviobj6));
+                CCS.StopCopCarSpawn();
+
+                GameObject[] cars = GameObject.FindGameObjectsWithTag("CopCar");
+                foreach (GameObject car in cars)
+                {
+                    GameObject.Destroy(car);
+                }
+
+                StartCoroutine("BossFightEnd");
+            }
         }
     }
 
@@ -110,12 +131,18 @@ public class HeliCopterAI : MonoBehaviour, Shootable
     {
         GameObject CurrentAttack = Instantiate(evidence, transform.position, Quaternion.Euler(0,0,0));
         CurrentAttack.GetComponent<Rigidbody>().AddForce((playerlocation - transform.position + new Vector3(0,1,0)) * 10);
-        yield return new WaitForSeconds(20);
+        yield return new WaitForSeconds(30);
         Destroy(CurrentAttack);
     }
 
     void Update()
     {
         playerlocation = player.position;
+    }
+
+    IEnumerator BossFightEnd()
+    {
+        yield return new WaitForSeconds(35f);
+        SceneManager.LoadScene("Level 3.5");
     }
 }

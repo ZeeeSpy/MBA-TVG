@@ -4911,6 +4911,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss3CopCar
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c0c6fb8a62d006a4e85b762dc8f8371e, type: 3}
+      propertyPath: m_TagString
+      value: CopCar
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c0c6fb8a62d006a4e85b762dc8f8371e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.22

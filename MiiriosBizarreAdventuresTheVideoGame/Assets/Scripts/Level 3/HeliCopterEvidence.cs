@@ -7,7 +7,7 @@ public class HeliCopterEvidence : MonoBehaviour, Shootable
     [SerializeField]
     public int ProjectileDamage = 15;
     public GameObject HPBAR;
-    private int HP = 15;
+    public int HP = 15;
 
     void Start()
     {

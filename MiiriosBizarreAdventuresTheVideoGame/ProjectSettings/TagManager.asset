@@ -6,6 +6,7 @@ TagManager:
   tags:
   - World
   - CopCarCoordinator
+  - CopCar
   layers:
   - Default
   - TransparentFX

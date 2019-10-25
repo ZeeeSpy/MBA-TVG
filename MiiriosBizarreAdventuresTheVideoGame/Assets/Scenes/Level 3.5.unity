@@ -5853,7 +5853,8 @@ PrefabInstance:
     - target: {fileID: 4643302886901686265, guid: cbc2200382e0fad44ad524139fb80779,
         type: 3}
       propertyPath: m_Text
-      value: I Should Probably Thank The Getaway team for that escape
+      value: 'Made it to Japan, now it''s time to hit up the Bamco HQ and find out
+        who stole Lee''s plus frames '
       objectReference: {fileID: 0}
     - target: {fileID: 2146107631634599297, guid: cbc2200382e0fad44ad524139fb80779,
         type: 3}

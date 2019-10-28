@@ -920,7 +920,7 @@ MonoBehaviour:
   stringtoret: 'Z4c Murphy:
 
 
-    TEMP TEMP TEMP TEMP TEMP'
+    Miirio you might be a fifa player, but you''re an XBOXGANG fifa player.'
 --- !u!65 &417519829
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2164,6 +2164,108 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7414dfcf01b23c34396042506790f60c, type: 3}
+--- !u!1 &874677583 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 7414dfcf01b23c34396042506790f60c,
+    type: 3}
+  m_PrefabInstance: {fileID: 874677582}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &874677584
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874677583}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 14109ea5bcf38ce4c96a9c072f6fc6a4, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.75
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 0
+  MinDistance: 1
+  MaxDistance: 50
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &949242194 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400012, guid: 2f5787caafcb15849bed083e2ee19240,
@@ -2388,7 +2490,8 @@ MonoBehaviour:
   stringtoret: 'Bujin Fujin:
 
 
-    TEMP TEMP TEMP TEMP'
+    Miirio did you know you can trade in TWT points for gamerscore? 1 TWT point is
+    15G, pretty cool right?'
 --- !u!65 &1044884388
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2511,7 +2614,8 @@ MonoBehaviour:
   stringtoret: '2BarYoshii:
 
 
-    TEMP TEMP TEMP TEMP TEMP
+    Heya Miirio, since we got you outta there can you unban my boys accounts now?
+    Safe.
 
 '
 --- !u!65 &1062810214
@@ -5853,8 +5957,7 @@ PrefabInstance:
     - target: {fileID: 4643302886901686265, guid: cbc2200382e0fad44ad524139fb80779,
         type: 3}
       propertyPath: m_Text
-      value: 'Made it to Japan, now it''s time to hit up the Bamco HQ and find out
-        who stole Lee''s plus frames '
+      value: Better thank the people that got me out of that mess.
       objectReference: {fileID: 0}
     - target: {fileID: 2146107631634599297, guid: cbc2200382e0fad44ad524139fb80779,
         type: 3}

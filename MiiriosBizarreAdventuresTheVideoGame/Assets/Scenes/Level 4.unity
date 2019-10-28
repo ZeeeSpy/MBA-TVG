@@ -2299,5 +2299,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4643302886901686265, guid: cbc2200382e0fad44ad524139fb80779,
+        type: 3}
+      propertyPath: m_Text
+      value: Finally made it to Japan, have to fight my way through weebs to get to
+        Bamco HQ.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbc2200382e0fad44ad524139fb80779, type: 3}

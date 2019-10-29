@@ -98,7 +98,7 @@ public class GuvAI : MonoBehaviour, Shootable
     {
         if (!FallOver)
         {
-            transform.position = new Vector3(transform.position.x, 0.51f, transform.position.z);
+            transform.position = new Vector3(transform.position.x, transform.position.y-0.51f, transform.position.z);
             thisAudioSource.PlayOneShot(DeadSFX[Random.Range(0, DeadSFX.Length)]);
             transform.Rotate(0, 0, 90);
             FallOver = true;

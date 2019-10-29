@@ -104,9 +104,9 @@ GameObject:
   - component: {fileID: 7234428826935626419}
   - component: {fileID: 7234428826935626418}
   - component: {fileID: 7234428826935626413}
-  - component: {fileID: 7234428826935626415}
   - component: {fileID: 7234428826935626412}
   - component: {fileID: 7234428826935626417}
+  - component: {fileID: 2397578411253793923}
   m_Layer: 0
   m_Name: Anime
   m_TagString: Untagged
@@ -191,20 +191,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7234428826935626415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7234428826935626414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 379e5b1df26457344bb8c41a85d7c9ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 100
-  attack: {fileID: 7145879126486931606, guid: ea9ce469802fa284389a243dcf97a333, type: 3}
 --- !u!195 &7234428826935626412
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -323,6 +309,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2397578411253793923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7234428826935626414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12c1809a1ab4d394bb4720281d188227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 100
+  attack: {fileID: 7145879126486931606, guid: b12db99301c7bf34fa929d8183e75991, type: 3}
 --- !u!1 &7234428827645934653
 GameObject:
   m_ObjectHideFlags: 0

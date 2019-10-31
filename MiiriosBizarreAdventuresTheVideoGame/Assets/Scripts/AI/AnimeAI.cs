@@ -54,7 +54,7 @@ public class AnimeAI : MonoBehaviour, Shootable
         }
         Ray ray = new Ray(transform.position, playerlocation - transform.position);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 30f))
+        if (Physics.Raycast(ray, out hit, 100f))
         {
             if (hit.transform.tag == "Player")
             {

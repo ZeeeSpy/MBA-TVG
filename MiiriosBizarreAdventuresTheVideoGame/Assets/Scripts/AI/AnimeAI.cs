@@ -39,9 +39,9 @@ public class AnimeAI : MonoBehaviour, Shootable
         ThisGuv.updateRotation = false;
 
         //audio
-        AttackSFX = Resources.LoadAll<AudioClip>("Guv/Attack");
-        DeadSFX = Resources.LoadAll<AudioClip>("Guv/Dead");
-        HurtSFX = Resources.LoadAll<AudioClip>("Guv/Hurt");
+        AttackSFX = Resources.LoadAll<AudioClip>("Anime/Attack");
+        DeadSFX = Resources.LoadAll<AudioClip>("Anime/Dead");
+        HurtSFX = Resources.LoadAll<AudioClip>("Anime/Hurt");
     }
 
     // Update is called once per frame

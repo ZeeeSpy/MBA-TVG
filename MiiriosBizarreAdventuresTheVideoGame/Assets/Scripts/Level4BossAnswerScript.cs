@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Level4BossAnswerScript : MonoBehaviour, Shootable
 {
-    public bool correct = true;
+    public int correct = 1;
     private KingScript TheKingScript;
     public QuestionParentScript TPS;
 

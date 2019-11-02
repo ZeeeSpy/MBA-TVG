@@ -23,6 +23,14 @@ public class KingScript : MonoBehaviour, Shootable
 
     public GameObject question1;
     public GameObject question2;
+    public GameObject question3;
+    public GameObject question4;
+    public GameObject question5;
+    public GameObject question6;
+    public GameObject question7;
+    public GameObject question8;
+    public GameObject question9;
+    public GameObject question10;
 
     public void Awake()
     {
@@ -47,7 +55,7 @@ public class KingScript : MonoBehaviour, Shootable
             if (!hasbeenshot)
             {
                 hasbeenshot = true;
-                StartCoroutine(TTSQuestionRoutine(false));
+                StartCoroutine(TTSQuestionRoutine(0));
                 return;
             }
 
@@ -59,7 +67,7 @@ public class KingScript : MonoBehaviour, Shootable
         }
     }
 
-    IEnumerator TTSQuestionRoutine(bool rightwrong)
+    IEnumerator TTSQuestionRoutine(int rightwrong)
     {
         if (currentquestion == 0)
         {
@@ -84,7 +92,7 @@ public class KingScript : MonoBehaviour, Shootable
         {
             question1.SetActive(false);
             yield return new WaitForSeconds(4);
-            if (rightwrong == true)
+            if (rightwrong == 1)
             {
                 MusicSource.Stop();
                 MusicSource.PlayOneShot(Music[4]);
@@ -124,7 +132,7 @@ public class KingScript : MonoBehaviour, Shootable
         {
             question2.SetActive(false);
             yield return new WaitForSeconds(4);
-            if (rightwrong == true)
+            if (rightwrong == 1)
             {
                 MusicSource.Stop();
                 MusicSource.PlayOneShot(Music[5]);
@@ -140,11 +148,125 @@ public class KingScript : MonoBehaviour, Shootable
             }
             TTSCOUNT = 13;
 
+            //Ready up question into question music
+            MusicSource.PlayOneShot(Music[2]);
+            yield return new WaitForSeconds(3);
+            MusicSource.PlayOneShot(Music[3]);
+            question3.SetActive(true);
+
+            Speech.PlayOneShot(TTS[TTSCOUNT]);
+            yield return new WaitForSeconds(TTS[TTSCOUNT].length);
+            TTSCOUNT++;
+
+            Speech.PlayOneShot(TTS[TTSCOUNT]);
+            yield return new WaitForSeconds(TTS[TTSCOUNT].length);
+            TTSCOUNT++;
+
+            Speech.PlayOneShot(TTS[TTSCOUNT]);
+            yield return new WaitForSeconds(TTS[TTSCOUNT].length);
+            TTSCOUNT++;
+        }
+
+        else if (currentquestion == 3)
+        {
+            question3.SetActive(false);
+            yield return new WaitForSeconds(4);
+            if (rightwrong == 1)
+            {
+                MusicSource.Stop();
+                MusicSource.PlayOneShot(Music[4]);
+                Speech.PlayOneShot(TTS[16]);
+                yield return new WaitForSeconds(TTS[16].length);
+            } else if (rightwrong == 2)
+            {
+                MusicSource.Stop();
+                MusicSource.PlayOneShot(Music[5]);
+                Speech.PlayOneShot(TTS[17]);
+                yield return new WaitForSeconds(TTS[17].length);
+            } else if (rightwrong == 3)
+            {
+                MusicSource.Stop();
+                MusicSource.PlayOneShot(Music[5]);
+                Speech.PlayOneShot(TTS[18]);
+                yield return new WaitForSeconds(TTS[18].length);
+            } else if (rightwrong == 4)
+            {
+                MusicSource.Stop();
+                MusicSource.PlayOneShot(Music[5]);
+                Speech.PlayOneShot(TTS[19]);
+                yield return new WaitForSeconds(TTS[19].length);
+            }
+            TTSCOUNT = 20;
+            MusicSource.Stop();
+
+            //Ready up question into question music
+            MusicSource.PlayOneShot(Music[2]);
+            yield return new WaitForSeconds(3);
+            MusicSource.PlayOneShot(Music[3]);
+            question4.SetActive(true);
+
+            Speech.PlayOneShot(TTS[TTSCOUNT]);
+            yield return new WaitForSeconds(TTS[TTSCOUNT].length);
+            TTSCOUNT = 14;
+            Speech.PlayOneShot(TTS[TTSCOUNT]);
+            yield return new WaitForSeconds(TTS[TTSCOUNT].length);
+            TTSCOUNT++;
+            Speech.PlayOneShot(TTS[TTSCOUNT]);
+            yield return new WaitForSeconds(TTS[TTSCOUNT].length);
+        }
+
+        else if (currentquestion == 4)
+        {
+            question4.SetActive(false);
+            yield return new WaitForSeconds(4);
+            if (rightwrong == 1)
+            {
+                MusicSource.Stop();
+                MusicSource.PlayOneShot(Music[5]);
+                Speech.PlayOneShot(TTS[21]);
+                yield return new WaitForSeconds(TTS[21].length);
+            }
+            else if (rightwrong == 2)
+            {
+                MusicSource.Stop();
+                MusicSource.PlayOneShot(Music[5]);
+                Speech.PlayOneShot(TTS[22]);
+                yield return new WaitForSeconds(TTS[22].length);
+            }
+            else if (rightwrong == 3)
+            {
+                MusicSource.Stop();
+                MusicSource.PlayOneShot(Music[5]);
+                Speech.PlayOneShot(TTS[23]);
+                yield return new WaitForSeconds(TTS[23].length);
+            }
+            else if (rightwrong == 4)
+            {
+                MusicSource.Stop();
+                MusicSource.PlayOneShot(Music[5]);
+                Speech.PlayOneShot(TTS[24]);
+                yield return new WaitForSeconds(TTS[24].length);
+            }
+            MusicSource.Stop();
+
+            //Ready up question into question music
+            MusicSource.PlayOneShot(Music[2]);
+            yield return new WaitForSeconds(3);
+            MusicSource.PlayOneShot(Music[3]);
+
+            //SET NEXT QUESTION 
+            question5.SetActive(true);
+            TTSCOUNT = 25;
+            Speech.PlayOneShot(TTS[TTSCOUNT]);
+            yield return new WaitForSeconds(TTS[TTSCOUNT].length);
+            TTSCOUNT++;
+
         }
     }
 
-    public void SelectAnswer(bool incanswer)
+    public void SelectAnswer(int incanswer)
     {
+        StopCoroutine(TTSQuestionRoutine(-1));
         Speech.Stop();
         MusicSource.Stop();
         MusicSource.PlayOneShot(Music[1]);
@@ -152,3 +274,4 @@ public class KingScript : MonoBehaviour, Shootable
         StartCoroutine(TTSQuestionRoutine(incanswer));
     }
 }
+//5 is correct 4 is wrong

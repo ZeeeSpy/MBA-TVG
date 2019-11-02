@@ -558,7 +558,7 @@ PrefabInstance:
     - target: {fileID: 1616514090668781325, guid: 6a996ff3684c3104a8780ffc98493967,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1616514090668781323, guid: 6a996ff3684c3104a8780ffc98493967,
         type: 3}
@@ -1043,6 +1043,26 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e07c9a500fbffb845acfa66171a943f2, type: 3}
   - {fileID: 8300000, guid: e1fa3681f25d4454a826cfa0849014bb, type: 3}
   - {fileID: 8300000, guid: 099f23d23df205d44aa85ad0b7e6e575, type: 3}
+  - {fileID: 8300000, guid: 992e66588dfd5954980cc8246cc1b484, type: 3}
+  - {fileID: 8300000, guid: 21f9dd94c04320e4d9130caad4940856, type: 3}
+  - {fileID: 8300000, guid: 6ed14fdac94a3174bafdffa5b98c6a7b, type: 3}
+  - {fileID: 8300000, guid: 9c13f2a7b19d9a142b16adf03a0c14b2, type: 3}
+  - {fileID: 8300000, guid: 691cfa7840e62924fb460eae21cef733, type: 3}
+  - {fileID: 8300000, guid: ccd5149670106f2419deaf2298fd2121, type: 3}
+  - {fileID: 8300000, guid: 9668b21d98aa7144e926378a072764a8, type: 3}
+  - {fileID: 8300000, guid: 8177f31c8dbea6642be4f73bb3868b8e, type: 3}
+  - {fileID: 8300000, guid: 305f5fba8e48bb745a43460d825a0f18, type: 3}
+  - {fileID: 8300000, guid: 5bfbda808990e4d49a4057453fef9f75, type: 3}
+  - {fileID: 8300000, guid: 481f8169def03e7439553c72fd7d2e35, type: 3}
+  - {fileID: 8300000, guid: 488ca9dd54c07914ba9f97eccb887f17, type: 3}
+  - {fileID: 8300000, guid: 4a647b69853842445b2b3ab021a903ea, type: 3}
+  - {fileID: 8300000, guid: 9870adf95b69c2e4f8a81c41b787ced6, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -3233,7 +3253,7 @@ PrefabInstance:
     - target: {fileID: 1616514090668781325, guid: 15b6c8c79d100b746a8fa5bf0086e246,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1616514090668781323, guid: 15b6c8c79d100b746a8fa5bf0086e246,
         type: 3}

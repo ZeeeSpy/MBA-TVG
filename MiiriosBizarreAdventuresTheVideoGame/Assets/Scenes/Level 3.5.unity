@@ -917,10 +917,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a05924e862b4324084210f9fbe6b921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stringtoret: 'Z4c Murphy:
+  stringtoret: 'Z4C MURPHY:
 
 
-    Miirio you might be a fifa player, but you''re an XBOXGANG fifa player.'
+    XBOXGANG is always behind you Miirio, go to Bamco and kick some ass for us. XBOXGANG'
 --- !u!65 &417519829
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2490,8 +2490,8 @@ MonoBehaviour:
   stringtoret: 'Bujin Fujin:
 
 
-    Miirio did you know you can trade in TWT points for gamerscore? 1 TWT point is
-    15G, pretty cool right?'
+    Miirio good work being a spy for the XBOXGANG. Wearing a PussyStation hoodie on
+    stream and everything! XBOXGANG'
 --- !u!65 &1044884388
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2614,10 +2614,7 @@ MonoBehaviour:
   stringtoret: '2BarYoshii:
 
 
-    Heya Miirio, since we got you outta there can you unban my boys accounts now?
-    Safe.
-
-'
+    we got your back Miirio, cant leave a great soldier like you behind! XBOXGANG.'
 --- !u!65 &1062810214
 BoxCollider:
   m_ObjectHideFlags: 0

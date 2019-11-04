@@ -122,8 +122,8 @@ GameObject:
   m_Component:
   - component: {fileID: 318217487}
   - component: {fileID: 318217490}
-  - component: {fileID: 318217489}
   - component: {fileID: 318217488}
+  - component: {fileID: 318217489}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -184,258 +184,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 017a6cfd9fcad4d4196ef8b3185e6cc9, type: 3}
-    m_FontSize: 45
+    m_FontSize: 25
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 50
     m_Alignment: 1
-    m_AlignByGeometry: 1
+    m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'A
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    AA
-
-    A'
+  m_Text: 
 --- !u!222 &318217490
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -711,7 +471,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 76c741ad109ba2a44a3d3c3ba64f74c2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5d3a0470f3b2864468e60a5cdda4b485, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2
   m_Pitch: 1

@@ -5,8 +5,10 @@
 <b>Special Thanks To</b>
 
 BujinFujin
-&
+
 ChrisK112
+
+Jaakie
 
 For Play Testing And Giving Ideas Along The Way
 
@@ -14,21 +16,24 @@ For Play Testing And Giving Ideas Along The Way
 <b> Bosses and Memers </b>
 
 
-VengaBus                        PepePls and Friends
+VengaBus     PepePls and Friends
 
 
-TheMainManSwe                   Twitch.tv/MainManSwe
+TheMainManSwe     Twitch.tv/MainManSwe
 
 
-Jungle Jaakie                   Twitch.tv/Jaakie
+Jungle Jaakie     Twitch.tv/Jaakie
 
 
-Fenguto                         Twitch.tv/Yazka   
+Fenguto     Twitch.tv/Yazka
 
 
-Miirio                          Bangbros.com/Miirio
+Senior Padoru     Twitch.tv/SeniorPadoru
 
-Also Miirio                     Twitch.tv/Miirio
+
+Miirio     Bangbros.com/Miirio
+
+Also Miirio     Twitch.tv/Miirio
 
 
 <b>Music In Order Of Appearance</b>
@@ -158,6 +163,7 @@ Management      <i>ZeeeSpy</i>
 
 
 <b> Assets I may or may not of used</b>
+
 https://poly.google.com/view/eum76SPhk0D
 https://poly.google.com/view/9ycLAR71SmR
 https://poly.google.com/view/dptlMEX4tF_
@@ -183,7 +189,11 @@ https://poly.google.com/view/9hUUD2DWk1v
 https://poly.google.com/view/80kuOgJDAgJ
 
 
+<b>Ultra Special Thanks To</b>
 
+The 3Heads that watch Twitch Tekken streams
+And you
+The Player
 
 
 

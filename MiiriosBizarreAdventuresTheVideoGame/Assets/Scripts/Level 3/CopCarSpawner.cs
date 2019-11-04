@@ -1,5 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ *  Script that spawns cop cars. It keeps track of which spots have cop cars in them already
+ *  and fill them gradually after a pseudo random pause
+ */
+
+
+using System.Collections;
 using UnityEngine;
 
 public class CopCarSpawner : MonoBehaviour

@@ -1,5 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ * Script I stole from some guy in the unity forums that makes the gun bob when you run around ala quake
+ */
+
 using UnityEngine;
 
 public class GunBob : MonoBehaviour

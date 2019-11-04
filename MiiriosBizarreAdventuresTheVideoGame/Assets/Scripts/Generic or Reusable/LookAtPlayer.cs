@@ -1,5 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ * Makes current game object face player. Used in many objects mostly AI scripts.
+ */
+
 using UnityEngine;
 
 public class LookAtPlayer : MonoBehaviour

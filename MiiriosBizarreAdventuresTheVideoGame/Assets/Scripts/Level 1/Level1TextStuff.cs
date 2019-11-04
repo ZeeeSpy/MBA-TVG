@@ -1,5 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ * Script that hides text in the interact text canvas after 10 seconds
+ */
+
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 

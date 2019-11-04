@@ -1,5 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ * When interacted returns a string to the players interact text script which allows text to be 
+ * displayed on screen
+ */
+
 using UnityEngine;
 
 public class GenericTextInteract : MonoBehaviour, Interactable

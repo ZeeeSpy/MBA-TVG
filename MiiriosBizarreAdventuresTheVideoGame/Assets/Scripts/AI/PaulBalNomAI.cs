@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/*
+ * Paul AI used in Level 2 based off Guv AI
+ */
+
+using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
 

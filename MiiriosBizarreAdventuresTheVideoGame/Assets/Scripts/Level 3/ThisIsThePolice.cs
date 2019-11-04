@@ -1,7 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ *  Script that handles the "story" elements of Level 3, 
+ *  such as :
+ *  -police voice lines
+ *  -XBXOGANG phone call
+ *  -XBOXGANG spawn
+ *  -Spawning Lei's
+ */
+
+using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ThisIsThePolice : MonoBehaviour
 {

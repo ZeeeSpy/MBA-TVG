@@ -1,4 +1,14 @@
-﻿using UnityEngine;
+﻿/*
+ * Guv AI. most AI in the game is based off this script
+ * 
+ * Behaviour is pretty simple, walk towards player until they are within a certain distance and can draw a ray
+ * from themselves to the player. If that happenes wait a big and fire a barage of three projectiles.
+ * 
+ * Guv's don't have any flocking or projectile avoidance, but this is because steve's (guv's) aren't the smartest
+ * so it makes sense.
+ */
+
+using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
 

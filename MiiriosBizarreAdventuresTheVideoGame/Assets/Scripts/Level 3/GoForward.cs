@@ -1,5 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ *  DEPRECIATED
+ *  
+ *  originally the player could control the ambulance making it go left and right
+ *  but this was changed in favor of allowing the player to move ontop of the ambulance
+ */
+
+
 using UnityEngine;
 
 public class GoForward : MonoBehaviour

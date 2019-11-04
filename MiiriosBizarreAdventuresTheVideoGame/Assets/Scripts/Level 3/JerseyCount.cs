@@ -1,5 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ *  Script that updates Jersey count when Jerseys are collected
+ */
+
 using UnityEngine;
 using UnityEngine.UI;
 

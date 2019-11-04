@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿/*
+ * Used for the weeb enemies in Level 4. Identical to GUV AI but with different voice lines and 
+ * the distance at which the player can be detected due to the larger stage
+ */
+
+using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
 

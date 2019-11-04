@@ -1,5 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ *  Script that activates an obect on trigger enter
+ */
+
 using UnityEngine;
 
 public class ActivateObjectsOnTrigger : MonoBehaviour

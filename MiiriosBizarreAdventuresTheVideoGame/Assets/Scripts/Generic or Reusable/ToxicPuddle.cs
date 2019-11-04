@@ -1,5 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ * Genetic script that gives a box collider a "floor is lava" property. 
+ */
+
 using UnityEngine;
 
 public class ToxicPuddle : MonoBehaviour

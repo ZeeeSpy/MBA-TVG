@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*
+ * Shootable interface that makes shootable objects shootable
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

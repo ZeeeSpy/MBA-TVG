@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ * Script that handles button presses in the main menu.
+ * 
+ * fairly generic
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;

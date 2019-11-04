@@ -1,5 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ *  Script that disables colliders in children when one answer is selected.
+ *  
+ *  used in level 4 boss fight
+ */
+
 using UnityEngine;
 
 public class QuestionParentScript : MonoBehaviour

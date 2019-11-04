@@ -1,5 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ *  Script used to controll cop cars during level 3 boss fight
+ *  
+ *  Cop car spawns in, moves towards player, once its close enough it stops and starts shooting
+ *  when it dies it informs the cop car spawner that its position is free and another cop car may be spawned
+ *  the stopping distance is randomised to remove unifomity in the cop car placements.
+ *  
+ *  May have an ongoing issue with shooting at the player. not easily replicable but I think it's fixed
+ */
+
+using System.Collections;
 using UnityEngine;
 
 public class CopCarScript : MonoBehaviour, Shootable
@@ -66,9 +75,8 @@ public class CopCarScript : MonoBehaviour, Shootable
         {
             yield return new WaitForSeconds(0.5f);
             {
-                playerlocation = player.position;
                 GameObject CurrentAttack = Instantiate(attack, transform.position + new Vector3(0, 1f, 0), transform.rotation);
-                CurrentAttack.GetComponent<Rigidbody>().AddForce((playerlocation - transform.position) * force);
+                CurrentAttack.GetComponent<Rigidbody>().AddForce((player.position - transform.position) * force);
             }
         }
     }

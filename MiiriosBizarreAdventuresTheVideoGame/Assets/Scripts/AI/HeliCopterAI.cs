@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*
+ * Helicopter AI. In charge of the phases and evidence projectiles in the Level 3 boss fight.
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;

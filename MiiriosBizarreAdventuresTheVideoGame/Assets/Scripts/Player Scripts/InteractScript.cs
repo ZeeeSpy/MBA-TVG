@@ -1,5 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ *  Script used for all intreractable objects.
+ */
 using UnityEngine;
 using UnityEngine.UI;
 

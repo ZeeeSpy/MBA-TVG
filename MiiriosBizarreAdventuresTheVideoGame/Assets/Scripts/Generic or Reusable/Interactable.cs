@@ -1,6 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿/*
+ * Interface that makes all interactable objects interactable.
+ */
 
 interface Interactable
 {

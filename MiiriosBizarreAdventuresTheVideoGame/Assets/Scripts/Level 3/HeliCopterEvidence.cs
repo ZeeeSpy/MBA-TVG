@@ -1,5 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ *  Script that spawns and controls evidence projectiles in Level 3 boss fight
+ */
+
+
+using System.Collections;
 using UnityEngine;
 
 public class HeliCopterEvidence : MonoBehaviour, Shootable

@@ -1,5 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ *  Script that moves road to give the illusion of player moving
+ */
+
+using System.Collections;
 using UnityEngine;
 
 public class RoadMovingScript : MonoBehaviour

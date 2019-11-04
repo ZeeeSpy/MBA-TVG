@@ -1,5 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ *  Script that picks up Jersey in level 3. increases Jersey count and destroys the Jersey 
+ */
+
+using System.Collections;
 using UnityEngine;
 
 public class PickUpJersey : MonoBehaviour

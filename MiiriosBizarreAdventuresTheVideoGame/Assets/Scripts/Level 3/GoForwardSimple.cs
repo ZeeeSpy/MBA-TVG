@@ -1,5 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ *  DEPRECIATED 
+ *  
+ *  used to move cop cars forward when level 3 boss was structed in a different way
+ */
+
 using UnityEngine;
 
 public class GoForwardSimple : MonoBehaviour

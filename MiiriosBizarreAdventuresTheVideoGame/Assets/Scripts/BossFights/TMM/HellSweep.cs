@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*
+ * Script that controls all the projectiles in the wave attack attack
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

@@ -1,5 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ *  Script that gradually incrases the volume of a audio source
+ *  
+ *  used to make it sound like police cars are pulling in from a distance
+ */
+
 using UnityEngine;
 
 public class AudioLoudener : MonoBehaviour

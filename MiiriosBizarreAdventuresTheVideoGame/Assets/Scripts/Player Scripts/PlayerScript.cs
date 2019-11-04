@@ -1,4 +1,10 @@
-﻿using UnityEngine.UI;
+﻿/*
+ *  Script that controls player health, as well as updating UI elementes regarding player health
+ *  
+ *  also in charge of killing player if they get below 0 hp
+ */
+
+using UnityEngine.UI;
 using UnityStandardAssets.Characters.FirstPerson;
 using UnityEngine;
 using UnityEngine.SceneManagement;

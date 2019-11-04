@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ * Script that attacked to the front and sides of the venga bus, so when the player gets hit
+ * they take damage and are sent into the air
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

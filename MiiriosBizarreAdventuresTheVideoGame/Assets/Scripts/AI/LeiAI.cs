@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/*
+ * Lei AI. Just Guv Ai with different resources loaded.
+ */
+
+using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
 

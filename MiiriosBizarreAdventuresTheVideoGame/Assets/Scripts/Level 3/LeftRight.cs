@@ -1,5 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ *  Script used by the helicopter to strafe left and right
+ */
+
+using System.Collections;
 using UnityEngine;
 
 public class LeftRight : MonoBehaviour

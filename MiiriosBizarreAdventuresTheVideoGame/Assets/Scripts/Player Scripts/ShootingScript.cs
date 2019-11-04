@@ -1,5 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ *  Script used to shoot. draws ray from player to cross hair, first collider that is hit is returned
+ *  if it's shootable it is shot, otherwise nothing happens
+ */
+
 using UnityEngine;
 
 public class ShootingScript : MonoBehaviour

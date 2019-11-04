@@ -1,5 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ *  Script that rotates helicopter towards the strafing direction
+ */
+
 using UnityEngine;
 
 public class HeliCopterSway : MonoBehaviour

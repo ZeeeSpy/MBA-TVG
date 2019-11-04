@@ -1,5 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ *  Script that spawns roads in Level 3 boss
+ */
+
+using System.Collections;
 using UnityEngine;
 
 public class RoadSpawningScript : MonoBehaviour

@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/*
+ * Script that controls TMM, his attack pattern and the change from day to night
+ */
+
+using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
 using UnityEngine.UI;

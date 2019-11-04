@@ -1,5 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ * Genetic script that rotates an object on it's y avis so it spins
+ */
+
 using UnityEngine;
 
 public class RotateOnYAxis : MonoBehaviour

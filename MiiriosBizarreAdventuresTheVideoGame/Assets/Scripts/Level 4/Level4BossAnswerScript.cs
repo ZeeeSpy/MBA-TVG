@@ -1,5 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ *  Script that each possible answer has. used so that game knows what answer the player selected
+ */
 using UnityEngine;
 
 public class Level4BossAnswerScript : MonoBehaviour, Shootable

@@ -1,5 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ * Genetic script that toggles the sprite of an object when a trigger is activated
+ */
+
 using UnityEngine;
 
 public class VisibleToggle : MonoBehaviour

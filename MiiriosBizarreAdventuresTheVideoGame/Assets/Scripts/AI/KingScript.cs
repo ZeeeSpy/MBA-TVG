@@ -1,4 +1,14 @@
-﻿using System.Collections;
+﻿/*
+ * Script that handles player choices in level 4 B. 
+ * 
+ * Abandon all hope ye who enter here
+ * 
+ * The abomination that is TTSQuestionRoutine and all of it's magic numbers could of been done better
+ * but it works and I doubt I'm going to ever work on this project again after release so... your CPU
+ * can take those few extra cycles.
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;

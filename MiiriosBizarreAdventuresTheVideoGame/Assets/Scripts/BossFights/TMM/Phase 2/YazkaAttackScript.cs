@@ -1,5 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ * Script Used for the Yazka projectiles in Level 4 Boss
+ */
 using UnityEngine;
 
 public class YazkaAttackScript : MonoBehaviour

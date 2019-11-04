@@ -1,5 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ * Switch level on trigger enter. Level dictated by public variable set in editor.
+ * 
+ * Needs a loading screen so the game doesn't just hang for a few seconds on enter
+ */
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 

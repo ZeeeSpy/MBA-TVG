@@ -1,5 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ * Script that controls the venga buses behaviour. 
+ * 
+ * Behaviour is simple, bus stops, looks at player, stops, charges and then repeats 
+ * 
+ * when the bus gets below 50% hp the bus becomes faster and activates anti side step barriers.
+ */
+
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 

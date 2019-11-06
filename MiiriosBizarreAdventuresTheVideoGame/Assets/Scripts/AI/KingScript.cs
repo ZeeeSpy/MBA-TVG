@@ -31,7 +31,7 @@ public class KingScript : MonoBehaviour, Shootable
     bool timeout = false;
     IEnumerator inst = null;
 
-
+    public GameObject floor;
 
     public GameObject question1;
     public GameObject question2;
@@ -551,6 +551,8 @@ public class KingScript : MonoBehaviour, Shootable
             TTSCOUNT++;
             Speech.PlayOneShot(TTS[TTSCOUNT]);
             yield return new WaitForSeconds(TTS[TTSCOUNT].length);
+            floor.SetActive(false);
+            yield return new WaitForSeconds(1f);
             SceneManager.LoadScene("Level 5");
         }
     }

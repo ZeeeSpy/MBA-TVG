@@ -21,18 +21,23 @@ public class DonationScript : MonoBehaviour
     private string[] usernames = new string[] 
     { "ZeeeSpy","BujinFujin","2BarYoshiii","RealYatsu"};
 
+    private const string MAINMAN_DONATION = "mainman_donation_happened";
 
     void Start()
     {
         AS = GetComponent<AudioSource>();
         Subscriber.text = "";
         DonationText.text = "";
-        StartCoroutine("FirstDono");
+        if (!PlayerPrefs.HasKey(MAINMAN_DONATION))
+        {
+            StartCoroutine("FirstDono");
+        }
     }
 
     IEnumerator FirstDono()
     {
-        yield return new WaitForSeconds(2.5f);
+        PlayerPrefs.SetInt(MAINMAN_DONATION, 1);
+        yield return new WaitForSeconds(Random.Range(15,25));
         Subscriber.text = SubTextA + "TheMainManSwe" + SubTextB + "7.50" + SubTextC;
         DonationText.text = "You didn't show up for your coaching session this week, here's your £75 back";
         DonationGameObject.SetActive(true);

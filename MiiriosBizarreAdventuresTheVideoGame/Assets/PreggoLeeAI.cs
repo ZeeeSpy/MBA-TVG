@@ -29,6 +29,8 @@ public class PreggoLeeAI : MonoBehaviour
     private GameObject player;
     private Vector3 playerlocation;
 
+    Coroutine currentattack = null; //This is so that we can easily stop the coroutine
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -111,13 +113,14 @@ public class PreggoLeeAI : MonoBehaviour
             {
                 case 1:
                     int numbofloops = Random.Range(1, 8);
-                    StartCoroutine(B2Loop(numbofloops));
+                    currentattack = StartCoroutine(B2Loop(numbofloops));
                     yield return new WaitForSeconds(numbofloops*0.5f);
                     break;
                 case 2:
-                    StartCoroutine("D3");
+                    currentattack = StartCoroutine("D3");
                     yield return new WaitForSeconds(0.5f);
                     break;
+                //TODO one more attack
             }   
         }
     }

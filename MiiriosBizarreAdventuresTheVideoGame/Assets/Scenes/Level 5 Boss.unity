@@ -2902,6 +2902,7 @@ GameObject:
   - component: {fileID: 439350998}
   - component: {fileID: 439350999}
   - component: {fileID: 439351000}
+  - component: {fileID: 439351001}
   m_Layer: 0
   m_Name: PreggoLee
   m_TagString: Untagged
@@ -2965,7 +2966,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 439350995}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -4.95, y: 5.63, z: -0}
+  m_LocalPosition: {x: 1, y: 5.63, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 1627075702}
@@ -3001,6 +3002,12 @@ MonoBehaviour:
   Crosshair: {fileID: 1210963622}
   BulletSpawner: {fileID: 2034553972}
   Spinner: {fileID: 1903924202}
+  D3Projectile: {fileID: 7145879126486931606, guid: 830ba22914d82ed43a2ee924fc05aa49,
+    type: 3}
+  B2Projectile: {fileID: 7145879126486931606, guid: 297f17a65600dcb489cc47fee03d4546,
+    type: 3}
+  Music: {fileID: 8300000, guid: 129f3222122ce9044a1f5081fc9acead, type: 3}
+  B2Sound: {fileID: 8300000, guid: cdb92f39a90e55a458808da0647f2f08, type: 3}
 --- !u!82 &439351000
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3097,6 +3104,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &439351001
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439350995}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1200002, y: 1.12, z: 0.5}
+  m_Center: {x: 0, y: 0.000000007450581, z: 0.00000047683716}
 --- !u!1 &448448840
 GameObject:
   m_ObjectHideFlags: 0

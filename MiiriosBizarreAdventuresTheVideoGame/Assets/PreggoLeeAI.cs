@@ -12,12 +12,38 @@ public class PreggoLeeAI : MonoBehaviour
     public GameObject BulletSpawner;
     public GameObject Spinner;
 
+
+    private readonly float ProjectileLife = 5f;
+
+    //projectiles and sounds
+    public GameObject D3Projectile;
+    public GameObject B2Projectile;
+    private AudioSource AS;
+    public AudioClip Music;
+    public AudioClip B2Sound;
+
+
+    //player stuff
+    private GameObject player;
+    private Vector3 playerlocation;
+
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        StartCoroutine("LeeIntroMonologue");
+        AS = GetComponent<AudioSource>();
     }
 
+    void Start()
+    {
+        QuickStart();
+        //StartCoroutine("LeeIntroMonologue");
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    private void Update()
+    {
+        playerlocation = player.transform.position;
+    }
 
     IEnumerator LeeIntroMonologue()
     {
@@ -46,20 +72,75 @@ public class PreggoLeeAI : MonoBehaviour
         transform.localScale = new Vector3(10, 10, 1);
         yield return new WaitForSeconds(2);
         Spinner.SetActive(true);
+        AS.Stop();
+        AS.loop = true;
+        AS.clip = Music;
+        AS.Play();
         StartCoroutine("Survive");
     }
 
-    IEnumerator SurviveTimer()
+    private void QuickStart()
     {
-    yield return new WaitForSeconds(60);
+        AS.Stop();
+        Gun.SetActive(false);
+        Crosshair.SetActive(false);
+        BulletSpawner.SetActive(false);
+        texttoscreen.showtext("");
+        GetComponent<SpriteRenderer>().sprite = PreggoLeeSprite;
+        transform.localScale = new Vector3(10, 10, 1);
+        Spinner.SetActive(true);
+        AS.Stop();
+        AS.loop = true;
+        AS.clip = Music;
+        AS.Play();
+        StartCoroutine("Survive");
     }
 
     IEnumerator Survive()
     {
-        Coroutine timer = StartCoroutine(SurviveTimer());
+        int selectorint = 0;
         while (true)
         {
-            //survive loop
+            yield return new WaitForSeconds(Random.Range(1, 5));
+            selectorint = Random.Range(1,3);
+            switch (selectorint)
+            {
+                case 1:
+                    StartCoroutine("B2Loop");
+                    yield return new WaitForSeconds(1.5f);
+                    break;
+                case 2:
+                    StartCoroutine("D3");
+                    yield return new WaitForSeconds(0.5f);
+                    break;
+            }   
         }
+    }
+
+    IEnumerator B2Loop()
+    {
+
+        for (int i = 0; i < 3; i++)
+        {
+            AS.PlayOneShot(B2Sound);
+            StartCoroutine("B2");
+            yield return new WaitForSeconds(0.5f);
+        } //1.5 seconds total
+    }
+
+    IEnumerator B2()
+    {
+        GameObject CurrentAttack = Instantiate(B2Projectile, transform.position + new Vector3(0, 0.5f, 0), transform.rotation);
+        CurrentAttack.GetComponent<Rigidbody>().AddForce((playerlocation - transform.position) * 100);
+        yield return new WaitForSeconds(ProjectileLife);
+        Destroy(CurrentAttack);
+    }
+
+    IEnumerator D3()
+    {
+        GameObject CurrentAttack = Instantiate(D3Projectile, transform.position + new Vector3(0, -1, 0), transform.rotation);
+        CurrentAttack.GetComponent<Rigidbody>().AddForce(((playerlocation - transform.position) * 50));
+        yield return new WaitForSeconds(ProjectileLife);
+        Destroy(CurrentAttack);
     }
 }

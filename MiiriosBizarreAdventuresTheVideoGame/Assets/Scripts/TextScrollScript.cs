@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TextScrollScript : MonoBehaviour
 {
@@ -9,9 +8,16 @@ public class TextScrollScript : MonoBehaviour
     {
         TextAsset mytxtData = (TextAsset)Resources.Load("CreditsText");
         GetComponent<Text>().text = mytxtData.text;
+        PlayerPrefs.SetInt("gamebeatenplayerprof", 1);
     }
+
     void Update()
     {
         transform.Translate(0, 1, 0);  
+
+        if (transform.position.y > 5500)
+        {
+           SceneManager.LoadScene("MainMenu");
+        }
     }
 }

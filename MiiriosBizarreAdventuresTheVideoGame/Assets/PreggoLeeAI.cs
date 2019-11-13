@@ -10,10 +10,12 @@ public class PreggoLeeAI : MonoBehaviour
     public GameObject Gun;
     public GameObject Crosshair;
     public GameObject BulletSpawner;
-    public GameObject Spinner;
+
+    public GameObject LowSpinner;
+    public GameObject WallSpinner;
 
 
-    private readonly float ProjectileLife = 5f;
+    private readonly float ProjectileLife = 2.5f;
 
     //projectiles and sounds
     public GameObject D3Projectile;
@@ -71,7 +73,8 @@ public class PreggoLeeAI : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite = PreggoLeeSprite;
         transform.localScale = new Vector3(10, 10, 1);
         yield return new WaitForSeconds(2);
-        Spinner.SetActive(true);
+        LowSpinner.SetActive(true);
+        WallSpinner.SetActive(true);
         AS.Stop();
         AS.loop = true;
         AS.clip = Music;
@@ -88,7 +91,8 @@ public class PreggoLeeAI : MonoBehaviour
         texttoscreen.showtext("");
         GetComponent<SpriteRenderer>().sprite = PreggoLeeSprite;
         transform.localScale = new Vector3(10, 10, 1);
-        Spinner.SetActive(true);
+        LowSpinner.SetActive(true);
+        WallSpinner.SetActive(true);
         AS.Stop();
         AS.loop = true;
         AS.clip = Music;
@@ -101,13 +105,14 @@ public class PreggoLeeAI : MonoBehaviour
         int selectorint = 0;
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(1, 5));
+            yield return new WaitForSeconds(Random.Range(1, 3));
             selectorint = Random.Range(1,3);
             switch (selectorint)
             {
                 case 1:
-                    StartCoroutine("B2Loop");
-                    yield return new WaitForSeconds(1.5f);
+                    int numbofloops = Random.Range(1, 8);
+                    StartCoroutine(B2Loop(numbofloops));
+                    yield return new WaitForSeconds(numbofloops*0.5f);
                     break;
                 case 2:
                     StartCoroutine("D3");
@@ -117,15 +122,14 @@ public class PreggoLeeAI : MonoBehaviour
         }
     }
 
-    IEnumerator B2Loop()
+    IEnumerator B2Loop(int numberofloops)
     {
-
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < numberofloops; i++)
         {
             AS.PlayOneShot(B2Sound);
             StartCoroutine("B2");
             yield return new WaitForSeconds(0.5f);
-        } //1.5 seconds total
+        }
     }
 
     IEnumerator B2()

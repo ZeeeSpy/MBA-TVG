@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class PreggoLeeAI : MonoBehaviour
+public class PreggoLeeAI : MonoBehaviour, Shootable
 {
     public Level1TextStuff texttoscreen;
     public Sprite PreggoLeeSprite;
@@ -15,6 +17,10 @@ public class PreggoLeeAI : MonoBehaviour
     public GameObject WallSpinner;
     public GameObject FatherObj;
 
+    public GameObject sliderobj;
+    public Slider HPSlider;
+
+    private int HP = 200;
 
     private readonly float ProjectileLife = 2.5f;
 
@@ -28,9 +34,12 @@ public class PreggoLeeAI : MonoBehaviour
     public AudioClip phase2Music;
     public AudioClip B2Sound;
     public AudioClip TrackingSound;
+    public AudioClip Final;
 
     bool phase2 = false;
     bool phase3 = false;
+    bool finalphase = false;
+    bool finalphasestarted = false;
 
     //player stuff
     private GameObject player;
@@ -46,14 +55,25 @@ public class PreggoLeeAI : MonoBehaviour
 
     void Start()
     {
-        QuickStart();
-        //StartCoroutine("LeeIntroMonologue");
+        //QuickStart();
+        StartCoroutine("LeeIntroMonologue");
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void Update()
     {
         playerlocation = player.transform.position;
+
+        if (finalphase && !finalphasestarted)
+        {
+            StartCoroutine(FinalPhase());
+            finalphasestarted = true;
+        }
+    }
+
+    public void ToggleFinalPhase()
+    {
+        finalphase = true;
     }
 
     IEnumerator LeeIntroMonologue()
@@ -154,10 +174,44 @@ public class PreggoLeeAI : MonoBehaviour
             if (phase3)
             {
                 StopAllCoroutines();
-                StartCoroutine("Father");
+                Father();
                 AS.volume = 0.1f;
             }
             yield return new WaitForSeconds(0.25f);
+            selectorint = Random.Range(1, 4);
+            switch (selectorint)
+            {
+                case 1:
+                    int numbofloops = Random.Range(1, 8);
+                    currentattack = StartCoroutine(B2Loop(numbofloops));
+                    yield return new WaitForSeconds((numbofloops * 0.5f));
+                    break;
+                case 2:
+                    currentattack = StartCoroutine("D3");
+                    yield return new WaitForSeconds(0.25f);
+                    break;
+                case 3:
+                    currentattack = StartCoroutine("Tracking");
+                    yield return new WaitForSeconds(0.25f);
+                    break;
+            }
+        }
+    }
+
+    IEnumerator FinalPhase()
+    {
+        sliderobj.SetActive(true);
+        GetComponent<BoxCollider>().enabled = true;
+
+        LowSpinner.SetActive(true);
+        WallSpinner.SetActive(true);
+
+        int selectorint = 0;
+        AS.volume = 0.2f;
+        AS.loop = true;
+        while (true)
+        {
+            yield return new WaitForSeconds(0.5f);
             selectorint = Random.Range(1, 4);
             switch (selectorint)
             {
@@ -229,11 +283,37 @@ public class PreggoLeeAI : MonoBehaviour
         Destroy(CurrentAttack);
     }
 
-    IEnumerator Father()
+    private void Father()
     {
         LowSpinner.SetActive(false);
         WallSpinner.SetActive(false);
         FatherObj.SetActive(true);
-        yield return new WaitForSeconds(100f);
+    }
+
+    public void GetShot()
+    {
+        HP--;
+        HPSlider.value = HP;
+
+        if (HP <= 0)
+        {
+            Debug.Log("Boss Killed");
+            LowSpinner.SetActive(false);
+            WallSpinner.SetActive(false);
+            sliderobj.SetActive(false);
+            GetComponent<BoxCollider>().enabled = false;
+            StopAllCoroutines();
+            StartCoroutine("MiirioLine");
+        }
+    }
+
+    IEnumerator MiirioLine()
+    {
+        AS.Stop();
+        AS.volume = 0.5f;
+        AS.PlayOneShot(Final);
+        yield return new WaitForSeconds(Final.length);
+        Destroy(gameObject);
+        SceneManager.LoadScene("Credits");
     }
 }

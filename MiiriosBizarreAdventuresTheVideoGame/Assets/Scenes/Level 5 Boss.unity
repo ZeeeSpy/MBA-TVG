@@ -304,7 +304,7 @@ GameObject:
   m_Component:
   - component: {fileID: 125069219}
   - component: {fileID: 125069220}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Demo (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2397,7 +2397,7 @@ GameObject:
   m_Component:
   - component: {fileID: 147346927}
   - component: {fileID: 147346928}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Demo (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2678,10 +2678,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 323442152}
   PreggoLee: {fileID: 439350995}
+  LeeAI: {fileID: 439350999}
   playerscript: {fileID: 323442154}
+  CrossHair: {fileID: 1210963622}
+  Gun: {fileID: 587667193}
+  BulletScript: {fileID: 2034553972}
   Voicelines:
   - {fileID: 8300000, guid: ce963259e940db646a63b1e2f7f10a7d, type: 3}
   - {fileID: 8300000, guid: da25eada8eeb4b144bb0abbc4a1b7040, type: 3}
+  - {fileID: 8300000, guid: 5c4872c36a9b594468abfe3890eb4f94, type: 3}
 --- !u!212 &402457659
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2768,7 +2773,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3231,6 +3236,8 @@ MonoBehaviour:
   LowSpinner: {fileID: 1903924202}
   WallSpinner: {fileID: 1953697208}
   FatherObj: {fileID: 402457657}
+  sliderobj: {fileID: 448448840}
+  HPSlider: {fileID: 448448842}
   D3Projectile: {fileID: 7145879126486931606, guid: 830ba22914d82ed43a2ee924fc05aa49,
     type: 3}
   B2Projectile: {fileID: 7145879126486931606, guid: 297f17a65600dcb489cc47fee03d4546,
@@ -3241,6 +3248,7 @@ MonoBehaviour:
   phase2Music: {fileID: 8300000, guid: 72c82af79f18aa54696658b97049d8ab, type: 3}
   B2Sound: {fileID: 8300000, guid: cdb92f39a90e55a458808da0647f2f08, type: 3}
   TrackingSound: {fileID: 8300000, guid: c37b46c177df77a40b9b374e3b5ed299, type: 3}
+  Final: {fileID: 8300000, guid: fbb8d122c39c4df4184340e434737ea7, type: 3}
 --- !u!82 &439351000
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3346,7 +3354,7 @@ BoxCollider:
   m_GameObject: {fileID: 439350995}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.1200002, y: 1.12, z: 0.5}
   m_Center: {x: 0, y: 0.000000007450581, z: 0.00000047683716}
@@ -3448,7 +3456,7 @@ GameObject:
   m_Component:
   - component: {fileID: 452172994}
   - component: {fileID: 452172995}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Demo (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3527,7 +3535,7 @@ GameObject:
   m_Component:
   - component: {fileID: 461428059}
   - component: {fileID: 461428060}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Demo (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3606,7 +3614,7 @@ GameObject:
   m_Component:
   - component: {fileID: 482859972}
   - component: {fileID: 482859973}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Demo (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3685,7 +3693,7 @@ GameObject:
   m_Component:
   - component: {fileID: 495849136}
   - component: {fileID: 495849137}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Demo (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4155,7 +4163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 779665145}
   - component: {fileID: 779665144}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Demo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4688,7 +4696,7 @@ GameObject:
   m_Component:
   - component: {fileID: 972901824}
   - component: {fileID: 972901825}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Demo (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4964,7 +4972,7 @@ GameObject:
   - component: {fileID: 1024096335}
   - component: {fileID: 1024096336}
   - component: {fileID: 1024096337}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: DemoBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5168,7 +5176,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: TheMainManSWE
+  m_Text: Lee Chaolan
 --- !u!222 &1088972763
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5187,7 +5195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1166230990}
   - component: {fileID: 1166230991}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Demo (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5413,7 +5421,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1450185503}
   - component: {fileID: 1450185504}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Demo (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5698,7 +5706,7 @@ GameObject:
   - component: {fileID: 1550842500}
   - component: {fileID: 1550842499}
   - component: {fileID: 1550842501}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: DemoWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5860,7 +5868,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1637447394}
   - component: {fileID: 1637447395}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: DemoWall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6206,7 +6214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1730433739}
   - component: {fileID: 1730433740}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Demo (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6376,7 +6384,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1903924203}
   - component: {fileID: 1903924204}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Spinner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6421,7 +6429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1953697209}
   - component: {fileID: 1953697210}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SpinnerWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6467,7 +6475,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1983743679}
   - component: {fileID: 1983743680}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Demo (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6552,7 +6560,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2133024644}
   - component: {fileID: 2133024645}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Demo (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

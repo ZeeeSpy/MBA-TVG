@@ -5,6 +5,7 @@ public class FatherScript : MonoBehaviour
 {
     public GameObject player;
     public GameObject PreggoLee;
+    public PreggoLeeAI LeeAI;
 
     private Vector3 MidPosition;
 
@@ -12,8 +13,12 @@ public class FatherScript : MonoBehaviour
 
     public PlayerScript playerscript;
 
+    public GameObject CrossHair;
+    public GameObject Gun;
+    public GameObject BulletScript;
+
     private AudioSource AS;
-    public AudioClip[] Voicelines = new AudioClip[2];
+    public AudioClip[] Voicelines = new AudioClip[3];
 
 
     // Start is called before the first frame update
@@ -48,9 +53,17 @@ public class FatherScript : MonoBehaviour
         AS.PlayOneShot(Voicelines[counter]);
         yield return new WaitForSeconds(Voicelines[counter].length);
         counter++;
-        playerscript.FullHeal();
+        
         AS.PlayOneShot(Voicelines[counter]);
         yield return new WaitForSeconds(Voicelines[counter].length);
+        counter++;
+        playerscript.FullHeal();
+        Gun.SetActive(true);
+        CrossHair.SetActive(true);
+        BulletScript.SetActive(true);
+        AS.PlayOneShot(Voicelines[counter]);
+        yield return new WaitForSeconds(Voicelines[counter].length);
+        LeeAI.ToggleFinalPhase();
         Destroy(gameObject);
     }
 }

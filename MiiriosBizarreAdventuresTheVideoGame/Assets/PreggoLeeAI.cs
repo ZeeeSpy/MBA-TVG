@@ -55,9 +55,14 @@ public class PreggoLeeAI : MonoBehaviour, Shootable
 
     void Start()
     {
-        //QuickStart();
-        StartCoroutine("LeeIntroMonologue");
         player = GameObject.FindGameObjectWithTag("Player");
+        if (PlayerPrefs.HasKey("LeeDone"))
+        {
+            QuickStart();
+        } else
+        {
+            StartCoroutine("LeeIntroMonologue");
+        }
     }
 
     private void Update()
@@ -108,6 +113,7 @@ public class PreggoLeeAI : MonoBehaviour, Shootable
         AS.loop = true;
         AS.clip = Music;
         AS.Play();
+        PlayerPrefs.SetInt("LeeDone", 1);
         StartCoroutine("Survive");
     }
 
@@ -126,7 +132,7 @@ public class PreggoLeeAI : MonoBehaviour, Shootable
         AS.loop = true;
         AS.clip = Music;
         AS.Play();
-        StartCoroutine("SurvivePhase2");
+        StartCoroutine("Survive");
     }
 
     IEnumerator Survive()

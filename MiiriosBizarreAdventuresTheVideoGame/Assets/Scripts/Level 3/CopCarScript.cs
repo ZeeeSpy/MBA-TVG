@@ -14,7 +14,7 @@ using UnityEngine;
 public class CopCarScript : MonoBehaviour, Shootable
 {
     bool caughtup = false;
-    private Transform player;
+    private GameObject player;
     private int range;
     private int HP = 10;
     private int position;
@@ -26,7 +26,7 @@ public class CopCarScript : MonoBehaviour, Shootable
 
     private void Start()
     {
-        player = GameObject.FindWithTag("Player").transform;
+        player = GameObject.FindWithTag("MainCamera");
         range = Random.Range(15, 36);
     }
 
@@ -36,7 +36,7 @@ public class CopCarScript : MonoBehaviour, Shootable
         if (!caughtup)
         {
             transform.Translate(transform.forward * 50 * Time.deltaTime);
-            if ((player.position - transform.position).magnitude < range)
+            if ((player.transform.position - transform.position).magnitude < range)
             {
                 caughtup = true;
                 StartCoroutine("Attack");
@@ -74,11 +74,16 @@ public class CopCarScript : MonoBehaviour, Shootable
         while (true)
         {
             yield return new WaitForSeconds(0.5f);
-            {
-                GameObject CurrentAttack = Instantiate(attack, transform.position + new Vector3(0, 1f, 0), transform.rotation);
-                CurrentAttack.GetComponent<Rigidbody>().AddForce((player.position - transform.position) * force);
-            }
+            playerlocation = player.transform.position;
+            Debug.Log(playerlocation);
+            AttackFunction();
         }
+    }
+
+    private void AttackFunction()
+    {
+        GameObject CurrentAttack = Instantiate(attack, transform.position + new Vector3(0, 1f, 0), transform.rotation);
+        CurrentAttack.GetComponent<Rigidbody>().AddForce(((playerlocation - transform.position)+new Vector3(0,-1,0)) * 75);
     }
 
 }

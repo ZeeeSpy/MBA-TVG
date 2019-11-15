@@ -47,6 +47,12 @@ public class PlayerScript : MonoBehaviour
         RankUIImage.sprite = RankArray[HP];
     }
 
+    public void FullHeal()
+    {
+        HP = 45;
+        UpdateRank();
+    }
+
     private void PlayerDead()
     {
         if (!Died)

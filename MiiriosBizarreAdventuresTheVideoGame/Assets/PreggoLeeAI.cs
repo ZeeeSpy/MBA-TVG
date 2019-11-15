@@ -13,6 +13,7 @@ public class PreggoLeeAI : MonoBehaviour
 
     public GameObject LowSpinner;
     public GameObject WallSpinner;
+    public GameObject FatherObj;
 
 
     private readonly float ProjectileLife = 2.5f;
@@ -20,10 +21,16 @@ public class PreggoLeeAI : MonoBehaviour
     //projectiles and sounds
     public GameObject D3Projectile;
     public GameObject B2Projectile;
+    public GameObject TrackingProjectile;
+
     private AudioSource AS;
     public AudioClip Music;
+    public AudioClip phase2Music;
     public AudioClip B2Sound;
+    public AudioClip TrackingSound;
 
+    bool phase2 = false;
+    bool phase3 = false;
 
     //player stuff
     private GameObject player;
@@ -99,16 +106,23 @@ public class PreggoLeeAI : MonoBehaviour
         AS.loop = true;
         AS.clip = Music;
         AS.Play();
-        StartCoroutine("Survive");
+        StartCoroutine("SurvivePhase2");
     }
 
     IEnumerator Survive()
     {
+        StartCoroutine(Phase1Timer());
         int selectorint = 0;
         while (true)
         {
+            if (phase2)
+            {
+                StopAllCoroutines();
+                StartCoroutine("SurvivePhase2");
+            }
             yield return new WaitForSeconds(Random.Range(1, 3));
-            selectorint = Random.Range(1,3);
+            selectorint = Random.Range(1,4);
+           
             switch (selectorint)
             {
                 case 1:
@@ -120,9 +134,62 @@ public class PreggoLeeAI : MonoBehaviour
                     currentattack = StartCoroutine("D3");
                     yield return new WaitForSeconds(0.5f);
                     break;
-                //TODO one more attack
+                case 3:
+                    currentattack = StartCoroutine("Tracking");
+                    yield return new WaitForSeconds(0.5f);
+                    break;
             }   
         }
+    }
+
+    IEnumerator SurvivePhase2()
+    {
+        StartCoroutine(Phase2Timer());
+        int selectorint = 0;
+        AS.Stop();
+        AS.clip = phase2Music;
+        AS.Play();
+        while (true)
+        {
+            if (phase3)
+            {
+                StopAllCoroutines();
+                StartCoroutine("Father");
+                AS.volume = 0.1f;
+            }
+            yield return new WaitForSeconds(0.25f);
+            selectorint = Random.Range(1, 4);
+            switch (selectorint)
+            {
+                case 1:
+                    int numbofloops = Random.Range(1, 8);
+                    currentattack = StartCoroutine(B2Loop(numbofloops));
+                    yield return new WaitForSeconds((numbofloops * 0.5f));
+                    break;
+                case 2:
+                    currentattack = StartCoroutine("D3");
+                    yield return new WaitForSeconds(0.25f);
+                    break;
+                case 3:
+                    currentattack = StartCoroutine("Tracking");
+                    yield return new WaitForSeconds(0.25f);
+                    break;
+            }
+        }
+    }
+
+    IEnumerator Phase1Timer()
+    {
+        yield return new WaitForSeconds(60);
+        phase2 = true;
+        Debug.Log("TimesUp");
+    }
+
+    IEnumerator Phase2Timer()
+    {
+        yield return new WaitForSeconds(60);
+        phase3 = true;
+        Debug.Log("TimesUp");
     }
 
     IEnumerator B2Loop(int numberofloops)
@@ -145,9 +212,28 @@ public class PreggoLeeAI : MonoBehaviour
 
     IEnumerator D3()
     {
-        GameObject CurrentAttack = Instantiate(D3Projectile, transform.position + new Vector3(0, -1, 0), transform.rotation);
-        CurrentAttack.GetComponent<Rigidbody>().AddForce(((playerlocation - transform.position) * 50));
+        GameObject CurrentAttack = Instantiate(D3Projectile, transform.position + new Vector3(0, -3, 0), transform.rotation);
+        Vector3 vec = ((playerlocation - transform.position) * 50);
+        Vector3 force = new Vector3(vec.x, 0, vec.z);
+        CurrentAttack.GetComponent<Rigidbody>().AddForce(force);
         yield return new WaitForSeconds(ProjectileLife);
         Destroy(CurrentAttack);
+    }
+
+    IEnumerator Tracking()
+    {
+        AS.PlayOneShot(TrackingSound);
+        GameObject CurrentAttack = Instantiate(TrackingProjectile, transform.position + new Vector3(0f, 0.5f, 0), transform.rotation);
+        CurrentAttack.GetComponent<Rigidbody>().AddForce(((playerlocation - transform.position) *100));
+        yield return new WaitForSeconds(ProjectileLife);
+        Destroy(CurrentAttack);
+    }
+
+    IEnumerator Father()
+    {
+        LowSpinner.SetActive(false);
+        WallSpinner.SetActive(false);
+        FatherObj.SetActive(true);
+        yield return new WaitForSeconds(100f);
     }
 }

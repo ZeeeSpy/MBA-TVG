@@ -56,4 +56,9 @@ public class MainMenuScript : MonoBehaviour
     {
         PlayerPrefs.SetInt(GAME_BEATEN, 1);
     }
+
+    public void DeleteEverything()
+    {
+        PlayerPrefs.DeleteAll();
+    }
 }

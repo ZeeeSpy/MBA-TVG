@@ -19,6 +19,7 @@ public class MainMenuScript : MonoBehaviour
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        Application.targetFrameRate = 60;
     }
     public void StartGame()
     {

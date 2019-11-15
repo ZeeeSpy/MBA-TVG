@@ -8,13 +8,12 @@ public class DemoSpinScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Application.targetFrameRate = 60;
     }
 
     // Update is called once per frame
     void Update()
     {
-      transform.Rotate(new Vector3(Time.deltaTime * 0f, spinval, 0f));
-
+      transform.Rotate(new Vector3(0f, Time.deltaTime*spinval, 0f));
     }
 }

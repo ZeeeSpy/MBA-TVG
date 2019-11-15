@@ -264,7 +264,7 @@ public class PreggoLeeAI : MonoBehaviour, Shootable
 
     IEnumerator B2()
     {
-        GameObject CurrentAttack = Instantiate(B2Projectile, transform.position + new Vector3(0, 0.5f, 0), transform.rotation);
+        GameObject CurrentAttack = Instantiate(B2Projectile, transform.position, transform.rotation);
         CurrentAttack.GetComponent<Rigidbody>().AddForce((playerlocation - transform.position) * 100);
         yield return new WaitForSeconds(ProjectileLife);
         Destroy(CurrentAttack);
@@ -283,7 +283,7 @@ public class PreggoLeeAI : MonoBehaviour, Shootable
     IEnumerator Tracking()
     {
         AS.PlayOneShot(TrackingSound);
-        GameObject CurrentAttack = Instantiate(TrackingProjectile, transform.position + new Vector3(0f, 0.5f, 0), transform.rotation);
+        GameObject CurrentAttack = Instantiate(TrackingProjectile, transform.position , transform.rotation);
         CurrentAttack.GetComponent<Rigidbody>().AddForce(((playerlocation - transform.position) *100));
         yield return new WaitForSeconds(ProjectileLife);
         Destroy(CurrentAttack);

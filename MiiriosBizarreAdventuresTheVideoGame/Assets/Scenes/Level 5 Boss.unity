@@ -6418,7 +6418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c4e3db9de3758e4eaf664fefd837d41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spinval: -1.5
+  spinval: -70
 --- !u!1 &1953697208
 GameObject:
   m_ObjectHideFlags: 0
@@ -6464,7 +6464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c4e3db9de3758e4eaf664fefd837d41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spinval: 0.2
+  spinval: 15
 --- !u!1 &1983743678
 GameObject:
   m_ObjectHideFlags: 0

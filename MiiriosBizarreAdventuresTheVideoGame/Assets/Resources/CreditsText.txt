@@ -237,6 +237,11 @@ The Player
 
 
 
+Press Alt+F4 to quit the game like a true Tekken Frog.
+
+
+
+
 
 
 
